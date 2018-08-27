@@ -1,11 +1,11 @@
 class Flight < JourneyItem
 
-  validates :arrival_date, presense: true
-  validates :arrival_place, presense: true
-  validates :departure_date, presense: true
-  validates :departure_place, presense: true
-  validates :reservation_number, presense: true
-  validates :flight_number, presense: true
-  validates :price, presense: true, integer: true
+  validates :arrival_date, presence: true
+  validates :arrival_place, presence: true
+  validates :departure_date, presence: true
+  validates :departure_place, presence: true
+  validates :reservation_number, presence: true
+  validates :flight_number, presence: true
+  validates :price, presence: true, numericality: { only_integer: true }
 
 end
