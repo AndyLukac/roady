@@ -5,7 +5,7 @@ class Car < JourneyItem
   validates :departure_date, presence: true
   validates :departure_place, presence: true
   validates :reservation_number, presence: true
-  validates :price, presence: true, integer: true
+  validates :price, presence: true, numericality: { only_integer: true }
   validates :brand, presence: true
   validates :hiring_days, presence: true
 
