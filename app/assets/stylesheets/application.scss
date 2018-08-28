@@ -1,11 +1,11 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
-@import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "materialize/components/color-variables";
+@import "materialize";
+@import "material_icons";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
