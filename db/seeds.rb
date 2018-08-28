@@ -20,6 +20,8 @@ argentina = Journey.create!(
   date: "from 31/08/18 to 13/09/18",
   user: matho,
   )
+argentina.remote_photo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgCa1ae0KP-YCUlguGbhb-_i-r961zHujitcs3zQ0crp9UzsNK"
+argentina.save
 
 Train.create!(
   reservation_number: "H1N1",
