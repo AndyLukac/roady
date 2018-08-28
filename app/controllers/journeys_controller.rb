@@ -24,6 +24,7 @@ class JourneysController < ApplicationController
       redirect_to journeys_path
     else
       render :new
+    end
   end
 
   def edit
@@ -37,6 +38,6 @@ class JourneysController < ApplicationController
   end
 
   def journey_params
-    params.require(:journey).permit(:name, :date)
+    params.require(:journey).permit(:name, :date, :photo)
   end
 end
