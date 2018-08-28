@@ -4,6 +4,8 @@ ruby '2.4.4'
 gem 'cloudinary'
 gem 'carrierwave'
 
+gem "geocoder"
+
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
