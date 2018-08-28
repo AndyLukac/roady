@@ -1,5 +1,5 @@
 /* Main navbar */
-.footer {
+.footer-main {
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -12,6 +12,7 @@
 /* Logo */
 .logo {
   height: 50px;
+  align-items
 }
 
 /* Right section */
@@ -35,11 +36,4 @@
 .navbar-link:hover {
   color: $primary-color-light;
   text-decoration: none;
-}
-
-.navbar-btn {
-  background-color: color("shades", "white");
-  color: $primary-color;
-  padding: 5px 20px;
-  border-radius: 5px;
 }
