@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="form-design">
+        <h2>Create your journey</h2>
+
+        <%= simple_form_for @journey do |f| %>
+          <%= f.input :name, label: "Your journey's name", error: "Journey's name is mandatory, please specify one" %>
+          <%= f.input :date, label: 'Dates', error: "Dates are mandatory, please specify them" %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :available, label: 'Available Now ?' %>
+          <%= f.button :submit, "Add drone", class: "btn-primary" %>
+        <% end %>
+
+        <%= link_to "Back to your journeys'list" , journeys_path  %>
+      </div>
+    </div>
+  </div>
+</div>
