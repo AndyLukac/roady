@@ -15,21 +15,7 @@
       </div>
       <div id="accommodation" class="col s12">
         <% @journey.accommodations.each do |accommodation| %>
-        <div class="row">
-          <div class="journey-item-row">
-            <div class="col s6 journey-item-image">
-              <%= image_tag("airbnb", width: "300", class: "image-radius") %>
-            </div>
-            <div class="col s6">
-              <h5><%= accommodation.name %></h5>
-              <h6>Owner: <%= accommodation.owner %></h6>
-              <p>Address: <%= accommodation.address %></p>
-              <p>Guests: <%= accommodation.guests %></p>
-              <p style="font-style: italic;">Arrival Date: <%= accommodation.arrival_date %></p>
-              <p style="font-style: italic;">Departure Date: <%= accommodation.departure_date %></p>
-            </div>
-          </div>
-        </div>
+          <%= render accommodation %>
         <% end %>
       </div>
       <div id="flights" class="col s12">Test 2</div>
