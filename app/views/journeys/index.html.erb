@@ -1,9 +1,1 @@
-<% @journeys.each |journey| do %>
-  <div class="card"
-    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('<%= cl_image_path journey.photo, height: 300, width: 400, crop: :fill %>')">
-    <div class="card-name"><%= journey.name %></div>
-    <div class="card-date"><%= journey.date %></div>
-    <a class="card-link" href="#" ></a>
-  </div>
-<% end %>
+<%= render 'layouts/card' %>
