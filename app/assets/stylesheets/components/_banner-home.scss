@@ -1,0 +1,35 @@
+.banner {
+  background-size: cover;
+  height: calc(100vh - 50px - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  display:  flex;
+  align-items:  center;
+  justify-content:  center;
+  flex-direction:  column;
+}
+
+
+.banner-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: $primary-color;
+  margin-top: 20px;
+}
+
+.banner-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transition: background 0.3s ease;
+  color: $primary-color-dark;
+}
+
+.banner h1 {
+  color: white;
+  text-shadow: 2px 5px 10px #0000009e;
+}
