@@ -6,12 +6,25 @@
 
 .left-area {
   width: 50%;
+  height: auto;
+  overflow: hidden;
 }
 
 .right-area {
   width: 50%;
-  height: 100vh;
-  background: #ccc;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 120px);
+  position: relative;
+  overflow: hidden;
+}
+
+#accommodation {
+  display: block;
+  max-height: calc(100vh - 370px);
+  overflow: scroll;
 }
 
 p {

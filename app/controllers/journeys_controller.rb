@@ -83,7 +83,7 @@ class JourneysController < ApplicationController
           infoWindow: { content: train.arrival_place }
           # type: 'train'
         }]
-        end.flatten
+      end.flatten
   end
 
   def car_markers
