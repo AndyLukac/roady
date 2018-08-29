@@ -5,6 +5,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 47.824905, lng: 2.618787 }); // france coordinates
   const markers = JSON.parse(mapElement.dataset.markers);
   map.addMarkers(markers);
+  console.log(markers)
   if (markers.length === 0) {
     map.setZoom(2);
   } else if (markers.length === 1) {

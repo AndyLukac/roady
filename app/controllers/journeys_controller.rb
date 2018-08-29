@@ -69,7 +69,7 @@ class JourneysController < ApplicationController
   end
 
   def train_markers
-    @trains = Train.all
+    @trains = @journey.trains
 
       @markers << @trains.map do |train|
         [{
@@ -86,7 +86,7 @@ class JourneysController < ApplicationController
   end
 
   def car_markers
-    @cars = Car.all
+    @cars = @journey.cars
 
       @markers << @cars.map do |car|
         [{
@@ -103,7 +103,7 @@ class JourneysController < ApplicationController
   end
 
   def accommodation_markers
-    @accommodations = Accommodation.all
+    @accommodations = @journey.accommodations
 
       @markers << @accommodations.map do |accommodation|
         {
