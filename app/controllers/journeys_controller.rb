@@ -6,15 +6,16 @@ class JourneysController < ApplicationController
 
   def show
     @journey = Journey.find(params[:id])
+    @markers = []
+    flight_markers
 
-    flight_index
+    car_markers
 
-    car_index
+    train_markers
 
-    train_index
-
-    accommodation_index
-
+    accommodation_markers
+    puts "debug"
+    p @markers.flatten
   end
 
   def new
@@ -42,16 +43,18 @@ class JourneysController < ApplicationController
     redirect_to journeys_path
   end
 
+  private
+
   def journey_params
     params.require(:journey).permit(:name, :date, :photo)
   end
 
-  private
+  def flight_markers
+    @flights = @journey.flights
+    p "j'imprime les flights"
+    p @flights
 
-  def flight_index
-    @flights = Flight.all
-
-      @markers = @flights.map do |flight|
+      @markers << @flights.map do |flight|
         [{
           lat: flight.departure_latitude,
           lng: flight.departure_longitude,
@@ -65,10 +68,10 @@ class JourneysController < ApplicationController
         end.flatten
   end
 
-  def train_index
+  def train_markers
     @trains = Train.all
 
-      @markers = @trains.map do |train|
+      @markers << @trains.map do |train|
         [{
           lat: train.departure_latitude,
           lng: train.departure_longitude,
@@ -82,10 +85,10 @@ class JourneysController < ApplicationController
         end.flatten
   end
 
-  def car_index
+  def car_markers
     @cars = Car.all
 
-      @markers = @cars.map do |car|
+      @markers << @cars.map do |car|
         [{
           lat: car.departure_latitude,
           lng: car.departure_longitude,
@@ -99,10 +102,10 @@ class JourneysController < ApplicationController
       end.flatten
   end
 
-  def accommodation_index
+  def accommodation_markers
     @accommodations = Accommodation.all
 
-      @markers = @accommodations.map do |accommodation|
+      @markers << @accommodations.map do |accommodation|
         {
         lat: accommodation.latitude,
         lng: accommodation.longitude,

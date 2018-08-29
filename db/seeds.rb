@@ -41,7 +41,7 @@ Flight.create!(
   departure_date: "31/08/18 - 18.30pm",
   arrival_date: "01/09/18 - 8.15am",
   price: 816,
-  journey: argentina
+  journey_id: 8
   )
 
 Car.create!(
