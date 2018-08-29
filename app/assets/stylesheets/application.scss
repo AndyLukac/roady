@@ -1,9 +1,11 @@
 // Graphical variables
-@import "config/fonts";
-@import "config/colors";
+// @import "config/fonts";
+// @import "config/colors";
 
 // External libraries
-@import "materialize/components/color-variables";
+@import "components/color-variables";
+@import "components/color-classes";
+@import "components/variables";
 @import "materialize";
 @import "material_icons";
 @import "font-awesome-sprockets";
@@ -13,3 +15,50 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "components/navbar";
+@import "components/footer";
+
+
+
+@charset "UTF-8";
+
+// Color
+
+
+// Variables;
+
+
+// // Reset
+// @import "components/normalize";
+
+// // components
+// @import "components/global";
+// @import "components/badges";
+// @import "components/icons-material-design";
+// @import "components/grid";
+// @import "components/navbar";
+// @import "components/typography";
+// @import "components/transitions";
+// @import "components/cards";
+// @import "components/toast";
+// @import "components/tabs";
+// @import "components/tooltip";
+// @import "components/buttons";
+// @import "components/dropdown";
+// @import "components/waves";
+// @import "components/modal";
+// @import "components/collapsible";
+// @import "components/chips";
+// @import "components/materialbox";
+// @import "components/forms/forms";
+// @import "components/table_of_contents";
+// @import "components/sidenav";
+// @import "components/preloader";
+// @import "components/slider";
+// @import "components/carousel";
+// @import "components/tapTarget";
+// @import "components/pulse";
+// @import "components/datepicker";
+// @import "components/timepicker";
+// @import "components/forms/checkboxes";
+

@@ -1,24 +1,18 @@
 /* Main navbar */
-.navbar {
+.footer-main {
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: $primary-color-dark;
 }
 
 /* Logo */
 .logo {
   height: 50px;
-}
-
-/* User Avatar */
-.navbar .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+  align-items
 }
 
 /* Right section */
@@ -42,10 +36,4 @@
 .navbar-link:hover {
   color: $primary-color-light;
   text-decoration: none;
-}
-
-.navbar-btn {
-  background-color: color("shades", "white");
-  color: $primary-color;
-  padding: 5px 20px;
 }
