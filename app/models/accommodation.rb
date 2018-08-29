@@ -1,4 +1,6 @@
 class Accommodation < JourneyItem
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   validates :name, presence: true
   validates :owner, presence: true
@@ -10,4 +12,6 @@ class Accommodation < JourneyItem
   validates :departure_date, presence: true
   validates :reservation_number, presence: true
 
+  def geocode_place_adresses
+  end
 end

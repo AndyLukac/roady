@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_091401) do
+ActiveRecord::Schema.define(version: 2018_08_28_160311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(version: 2018_08_28_091401) do
     t.string "brand"
     t.string "type"
     t.bigint "journey_id"
+    t.float "departure_longitude"
+    t.float "departure_latitude"
+    t.float "arrival_longitude"
+    t.float "arrival_latitude"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["journey_id"], name: "index_journey_items_on_journey_id"
   end
 
