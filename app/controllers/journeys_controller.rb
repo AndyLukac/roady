@@ -51,18 +51,20 @@ class JourneysController < ApplicationController
     @flights = @journey.flights
 
       @markers << @flights.map do |flight|
-        [
+        [{
 
           lat: flight.departure_latitude,
           lng: flight.departure_longitude,
           infoWindow: { content: flight.departure_place }
-        ],
-        [
+        },
+        {
           lat: flight.arrival_latitude,
           lng: flight.arrival_longitude,
           infoWindow: { content: flight.arrival_place }
-        ]
+        }]
         end.flatten
+        # we have to put the coordinates all together in an array, to be able to
+        # pass it in the show view with the drawRoute method
   end
 
   def train_markers
