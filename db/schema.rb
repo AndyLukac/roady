@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_105348) do
+ActiveRecord::Schema.define(version: 2018_08_29_133854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,9 +31,7 @@ ActiveRecord::Schema.define(version: 2018_08_29_105348) do
     t.integer "telephone"
     t.string "flight_number"
     t.string "reservation_number"
-    t.string "departure_date"
     t.string "departure_place"
-    t.string "arrival_date"
     t.string "arrival_place"
     t.integer "hiring_days"
     t.string "brand"
@@ -45,6 +43,8 @@ ActiveRecord::Schema.define(version: 2018_08_29_105348) do
     t.float "arrival_latitude"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "arrival_date"
+    t.datetime "departure_date"
     t.index ["journey_id"], name: "index_journey_items_on_journey_id"
   end
 
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2018_08_29_105348) do
     t.string "name"
     t.bigint "user_id"
     t.string "photo"
-    t.string "start_date"
-    t.string "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
