@@ -10,11 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_08_29_105348) do
-=======
 ActiveRecord::Schema.define(version: 2018_08_29_133854) do
->>>>>>> master
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,8 +54,13 @@ ActiveRecord::Schema.define(version: 2018_08_29_133854) do
     t.bigint "user_id"
     t.string "photo"
 <<<<<<< HEAD
+<<<<<<< HEAD
     t.string "start_date"
     t.string "end_date"
+=======
+    t.date "start_date"
+    t.date "end_date"
+>>>>>>> master
 =======
     t.date "start_date"
     t.date "end_date"
