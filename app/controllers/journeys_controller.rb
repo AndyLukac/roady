@@ -82,7 +82,7 @@ class JourneysController < ApplicationController
           lng: train.arrival_longitude,
           infoWindow: { content: train.arrival_place }
         }]
-        end.flatten
+      end.flatten
   end
 
   def car_markers
