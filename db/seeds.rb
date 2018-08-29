@@ -12,14 +12,16 @@ matho = User.create!(
   email: "matho@lewagon.com",
   user_name: "Matho",
   password: "roady2018"
-  )
+)
 
 puts "Je crée Argentina"
 argentina = Journey.create!(
   name: "Argentina",
-  date: "from 31/08/18 to 13/09/18",
+  start_date: Date.parse("31/08/2018"),
+  end_date: Date.parse("13/09/2018"),
   user: matho,
-  )
+)
+
 argentina.remote_photo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgCa1ae0KP-YCUlguGbhb-_i-r961zHujitcs3zQ0crp9UzsNK"
 argentina.save
 
@@ -27,8 +29,8 @@ Train.create!(
   reservation_number: "H1N1",
   departure_place: "Lyon Part-Dieu",
   arrival_place: "Paris Charles de Gaulle",
-  departure_date: "31/08/18 - 12.30pm",
-  arrival_date: "31/08/18 - 14pm",
+  departure_date: DateTime.parse("31/08/2018 6:00pm"),
+  arrival_date: DateTime.parse("31/08/2018 8:00pm"),
   price: 45,
   journey: argentina
   )
@@ -38,8 +40,8 @@ Flight.create!(
   flight_number: "AN 228",
   departure_place: "Paris Charles de Gaulle",
   arrival_place: "Buenos Aires Ezeiza",
-  departure_date: "31/08/18 - 18.30pm",
-  arrival_date: "01/09/18 - 8.15am",
+  departure_date: DateTime.parse("01/09/2018 2:00pm"),
+  arrival_date: DateTime.parse("01/09/2018 8:00pm"),
   price: 816,
   journey: argentina
   )
@@ -49,8 +51,8 @@ Car.create!(
   departure_place: "Buenos Aires Ezeiza",
   arrival_place: "Buenos Aires Ezeiza",
   brand: "Toyota",
-  departure_date: "01/09/18 - 9am",
-  arrival_date: "12/09/18 - 14pm",
+  departure_date: DateTime.parse("02/09/2018 10:00am"),
+  arrival_date: DateTime.parse("04/09/2018 2:00pm"),
   hiring_days: 12,
   price: 485,
   journey: argentina
@@ -59,8 +61,8 @@ Car.create!(
 
 Accommodation.create!(
   reservation_number: "RESA1",
-  arrival_date: "01/09/18 - 10am",
-  departure_date: "5/09/18 - 10am",
+  arrival_date: DateTime.parse("02/09/2018 10:00am"),
+  departure_date: DateTime.parse("04/09/2018 10:00am"),
   name: "Beautiful 2 bedroom appartment in Palermo district",
   owner: "Juan Andreas",
   address: "4517 Juan Francisco Seguí, Buenos Aires",
@@ -72,8 +74,8 @@ Accommodation.create!(
 
 Accommodation.create!(
   reservation_number: "RESA2",
-  arrival_date: "05/09/18 - 18pm",
-  departure_date: "12/09/18 - 6am",
+  arrival_date: DateTime.parse("05/09/2018 11:00am"),
+  departure_date: DateTime.parse("06/09/2018 2:00pm"),
   name: "Casa Linda",
   owner: "Sofia Martinez",
   address: "314 Rincon, Cordoba",
@@ -88,8 +90,8 @@ Flight.create!(
   flight_number: "AN 42",
   departure_place: "Buenos Aires Ezeiza",
   arrival_place: "Paris Charles de Gaulle",
-  departure_date: "12/09/18 - 19.30pm",
-  arrival_date: "13/09/18 - 8.35am",
+  departure_date: DateTime.parse("07/09/2018 07:30pm"),
+  arrival_date: DateTime.parse("07/09/2018 10:30pm"),
   price: 712,
   journey: argentina
   )
@@ -98,8 +100,8 @@ Train.create!(
   reservation_number: "G42D",
   departure_place: "Paris Charles de Gaulle",
   arrival_place: "Lyon Part-Dieu",
-  departure_date: "13/09/18 - 11.30am",
-  arrival_date: "13/09/18 - 13.45pm",
+  departure_date: DateTime.parse("08/09/2018 12:30pm"),
+  arrival_date: DateTime.parse("08/09/2018 5:30pm"),
   price: 45,
   journey: argentina
   )
