@@ -19,6 +19,37 @@
   border-radius: 10px;
 }
 
+.journey-item-dates {
+  display: flex;
+}
+
+.arrival {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.departure {
+  display: flex;
+  align-items: center;
+}
+
+.dates-icon {
+  margin-right: 10px;
+}
+
+a.active {
+  color: #5A5DAA !important;
+}
+
+.tabs .tab a {
+  color: #5a5daa96;
+}
+
+.tabs .tab a:hover {
+  color: #5A5DAA !important;
+}
+
 h4, h5 {
   margin: 0;
 }
