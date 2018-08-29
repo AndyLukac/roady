@@ -17,5 +17,4 @@ class JourneyItem < ApplicationRecord
     self.departure_latitude = departure_coordinates.first.latitude
     self.arrival_latitude = arrival_coordinates.first.latitude
   end
-
 end
