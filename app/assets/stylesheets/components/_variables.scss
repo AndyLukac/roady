@@ -56,20 +56,20 @@ $badge-height: 22px !default;
 
 // Shared styles
 $button-border: none !default;
-$button-background-focus: lighten($secondary-color, 4%) !default;
+$button-background-focus: lighten($primary-color, 4%) !default;
 $button-font-size: 14px !default;
 $button-icon-font-size: 1.3rem !default;
 $button-height: 36px !default;
-$button-padding: 0 16px !default;
-$button-radius: 2px !default;
+$button-padding: 0 25px !default;
+$button-radius: 5px !default;
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
-$button-raised-background: $secondary-color !default;
-$button-raised-background-hover: lighten($button-raised-background, 5%) !default;
+$button-raised-background: $primary-color !default;
+$button-raised-background-hover: $primary-color-dark !default;
 $button-raised-color: #fff !default;
 
 // Large buttons
@@ -164,23 +164,23 @@ $dropdown-item-height: 50px !default;
 
 // Text Inputs + Textarea
 $input-height: 3rem !default;
-$input-border-color: color("grey", "base") !default;
-$input-border: 1px solid $input-border-color !default;
+$input-border-color: white !default;
+$input-border: 1px solid white !default;
 $input-background: #fff !default;
-$input-error-color: $error-color !default;
-$input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-error-color: white !default;
+$input-success-color: white !default;
+$input-focus-color: white !default;
 $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;
 $input-padding: 0 !default;
 $label-font-size: .8rem !default;
-$input-disabled-color: rgba(0,0,0, .42) !default;
-$input-disabled-solid-color: #949494 !default;
-$input-disabled-border: 1px dotted $input-disabled-color !default;
-$input-invalid-border: 1px solid $input-error-color !default;
+$input-disabled-color: white !default;
+$input-disabled-solid-color: white !default;
+$input-disabled-border: 1px dotted white !default;
+$input-invalid-border: 1px solid white !default;
 $input-icon-size: 2rem;
-$placeholder-text-color: lighten($input-border-color, 20%) !default;
+$placeholder-text-color: white !default;
 
 // Radio Buttons
 $radio-fill-color: $secondary-color !default;
@@ -304,7 +304,7 @@ $toast-action-color: #eeff41;
 // ==========================================================================
 
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
-$off-black: rgba(0, 0, 0, 0.87) !default;
+$off-black: #6F6F6F !default;
 // Header Styles
 $h1-fontsize: 3rem !default;
 $h2-fontsize: 2.5rem !default;
