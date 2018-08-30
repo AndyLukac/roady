@@ -1,7 +1,7 @@
 /* Main navbar */
 .navbar {
   transition: all 0.3s ease;
-  height: 50px;
+  height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -10,8 +10,12 @@
 }
 
 /* Logo */
-.logo {
-  height: 30px;
+a.logo {
+  height: 50px;
+}
+
+.logo img {
+  height: 50px;
 }
 
 /* User Avatar */
@@ -54,4 +58,17 @@
 
 .navbar-btn:hover {
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 1280px) {
+  .navbar {
+    height: 50px;
+  }
+  a.logo {
+    height: 30px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
 }
