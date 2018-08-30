@@ -44,3 +44,16 @@
 #user_password_confirmation {
   color: white;
 }
+
+.section-search input.autocomplete {
+  background-color: #fff;
+}
+.input-field .prefix.active {
+  background-color: #fff!important;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  background-color: #fff!important;
+}
+.autocomplete-content li .highlight {
+  background-color: red!important;
+}
