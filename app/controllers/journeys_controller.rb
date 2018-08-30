@@ -15,8 +15,6 @@ class JourneysController < ApplicationController
     train_markers
 
     accommodation_markers
-    puts "debug"
-    p @markers.flatten
   end
 
   def new
@@ -52,11 +50,10 @@ class JourneysController < ApplicationController
 
   def flight_markers
     @flights = @journey.flights
-    p "j'imprime les flights"
-    p @flights
 
       @markers << @flights.map do |flight|
         [{
+
           lat: flight.departure_latitude,
           lng: flight.departure_longitude,
           infoWindow: { content: flight.departure_place }
@@ -67,6 +64,8 @@ class JourneysController < ApplicationController
           infoWindow: { content: flight.arrival_place }
         }]
         end.flatten
+        # we have to put the coordinates all together in an array, to be able to
+        # pass it in the show view with the drawRoute method
   end
 
   def train_markers
@@ -77,13 +76,15 @@ class JourneysController < ApplicationController
           lat: train.departure_latitude,
           lng: train.departure_longitude,
           infoWindow: { content: train.departure_place }
+          # type: 'train'
         },
         {
           lat: train.arrival_latitude,
           lng: train.arrival_longitude,
           infoWindow: { content: train.arrival_place }
+          # type: 'train'
         }]
-        end.flatten
+      end.flatten
   end
 
   def car_markers
