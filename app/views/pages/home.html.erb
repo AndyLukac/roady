@@ -1,1 +1,41 @@
 <%= render 'layouts/banner-home' %>
+
+<div class="wrapper-purpose">
+  <div class="container">
+    <div class="row">
+      <h2>Why use roady ?</h2>
+        <div class="purpose">
+          <div class="col l4 col m6 col s12">
+             <%= image_tag "icon2.svg", class: "icon"%>
+             <h3>Stop wastin’ time</h3>
+             <p>Stop searching and swithcing in all your mail to find your reservation number, the date of your flight back or the adress of your next Airbnb booking.</p>
+          </div>
+          <div class="col l4 col m6 col s12">
+             <%= image_tag "icon1.svg", class: "icon"%>
+             <h3>View all your bookings</h3>
+             <p>Display all your bookings at once, or browsing them by category : accomodation, flight, train or car.</p>
+          </div>
+          <div class="col l4 col m6 col s12">
+             <%= image_tag "icon3.svg", class: "icon"%>
+             <h3>Invite your friends</h3>
+             <p>You have decided to spent your next holiday with your friends ? Just invite them and you will be able to plan the perfect holiday all together !</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-action">
+  <div class="container">
+    <div class="row center">
+      <div class="col l6 col s12">
+        <%= image_tag "mockup_roady.png", class: "mockup"%>
+      </div>
+      <div class="col l6 col s12">
+        <h4>Plan a trip has never been <br><span id="highlight">easier</span><br> with Roady !</h4>
+          <%= link_to t(".sign_up", default: "Try now"), new_user_registration_path, class: "btn-action" %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
