@@ -6,14 +6,8 @@ class JourneysController < ApplicationController
 
   def show
     @journey = Journey.find(params[:id])
-    @markers = []
-    flight_markers
-
-    car_markers
-
-    train_markers
-
-    accommodation_markers
+    journey_items_markers
+    journey_items_paths
   end
 
   def new
@@ -47,72 +41,41 @@ class JourneysController < ApplicationController
     params.require(:journey).permit(:name, :date, :photo)
   end
 
-  def flight_markers
-    @flights = @journey.flights
-
-      @markers << @flights.map do |flight|
-        [{
-
-          lat: flight.departure_latitude,
-          lng: flight.departure_longitude,
-          infoWindow: { content: flight.departure_place }
-        },
-        {
-          lat: flight.arrival_latitude,
-          lng: flight.arrival_longitude,
-          infoWindow: { content: flight.arrival_place }
-        }]
-        end.flatten
-        # we have to put the coordinates all together in an array, to be able to
-        # pass it in the show view with the drawRoute method
+  def journey_items_paths
+    @path = []
+    @journey_items = JourneyItem.where(journey_id: params[:id]).order(departure_date: :asc)
+    @journey_items.map do |journey_item|
+      if journey_item.type != 'Accommodation'
+        @path << [journey_item.departure_latitude, journey_item.departure_longitude]
+        @path << [journey_item.arrival_latitude, journey_item.arrival_longitude]
+      else
+        @path << [journey_item.latitude, journey_item.longitude]
+      end
+    end
   end
 
-  def train_markers
-    @trains = @journey.trains
-
-      @markers << @trains.map do |train|
+  def journey_items_markers
+    @markers = []
+    @journey_items = JourneyItem.where(journey_id: params[:id])
+    @markers << @journey_items.map do |journey_item|
+      if journey_item.type != 'Accommodation'
         [{
-          lat: train.departure_latitude,
-          lng: train.departure_longitude,
-          infoWindow: { content: train.departure_place }
-          # type: 'train'
+          lat: journey_item.departure_latitude,
+          lng: journey_item.departure_longitude,
+          infoWindow: { content: journey_item.departure_place },
         },
         {
-          lat: train.arrival_latitude,
-          lng: train.arrival_longitude,
-          infoWindow: { content: train.arrival_place }
-          # type: 'train'
+          lat: journey_item.arrival_latitude,
+          lng: journey_item.arrival_longitude,
+          infoWindow: { content: journey_item.arrival_place },
         }]
-      end.flatten
-  end
-
-  def car_markers
-    @cars = @journey.cars
-
-      @markers << @cars.map do |car|
-        [{
-          lat: car.departure_latitude,
-          lng: car.departure_longitude,
-          infoWindow: { content: car.departure_place }
-        },
+      else
         {
-          lat: car.arrival_latitude,
-          lng: car.arrival_longitude,
-          infoWindow: { content: car.arrival_place }
-        }]
-      end.flatten
-  end
-
-  def accommodation_markers
-    @accommodations = @journey.accommodations
-
-      @markers << @accommodations.map do |accommodation|
-        {
-        lat: accommodation.latitude,
-        lng: accommodation.longitude,
-        infoWindow: { content: accommodation.name }
+          lat: journey_item.latitude,
+          lng: journey_item.longitude,
+          infoWindow: { content: journey_item.name },
         }
       end
+    end
   end
-
 end
