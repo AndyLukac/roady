@@ -19,6 +19,7 @@ argentina = Journey.create!(
   name: "Argentina",
   start_date: Date.parse("31/08/2018"),
   end_date: Date.parse("13/09/2018"),
+  photo: "https://images.unsplash.com/photo-1535515505335-9319ebc5c0f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4ec0036447bd2866efc7125ecfa3494c&auto=format&fit=crop&w=2100&q=80",
   user: matho,
 )
 

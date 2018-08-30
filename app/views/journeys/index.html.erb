@@ -1,25 +1,60 @@
 <div class="container">
-  <h1 style="text-align:center;"> My Journeys </h1>
+  <h1 style="text-align:center; margin: 0px; padding: 50px 0;"> My Journeys </h1>
+    <div class="row" style="margin: 0;">
   <% @journeys.each do |journey| %>
-    <div class="row">
       <div class="col s4 m4">
             <%#= cl_image_tag journey.photo %>
         <a href=<%= "#{journey_path(journey)}" %>
-          <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1526737511523-ba685f246e8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7673dbfb790ac307819fe5eec639da7b&auto=format&fit=crop&w=2691&q=80'); background-size: cover;">
-            <div class="journey-title">
-              <h2><%= journey.name %></h2>
-            </div>
-            <div class="journey-dates">
-              <h5><%= journey.start_date.strftime("%d.%m.%y") %></h5>
-              <i class="far fa-calendar-alt" style="font-size: 25px;"></i>
-              <h5><%= journey.end_date.strftime("%d.%m.%y") %></h5>
-            </div>
-          </div>
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path journey.photo, height: 300, width: 400, crop: :fill %>'); background-size: cover;">
+        <div class="journey-title">
+          <h2><%= journey.name %></h2>
+        </div>
+        <div class="journey-dates">
+          <h5><%= journey.start_date.strftime("%d.%m.%y") %></h5>
+          <i class="far fa-calendar-alt" style="font-size: 25px;"></i>
+          <h5><%= journey.end_date.strftime("%d.%m.%y") %></h5>
+        </div>
         </a>
+      </div>
+      <% end %>
+      <div class="col s4 m4">
+        <%#= cl_image_tag journey.photo %>
+        <div class="card add-journey" style="background:#ccc;">
+          <div class="add-top" style="height: 180px;">
+          <h6> Add a journey </h6>
+          <a href="#journeynew" class="btn-floating btn-large btn modal-trigger add-journey-button modal-close" id="open-modal-new"><i class="material-icons">add</i></a>
+          </div>
+          <div class="add-bottom" style="height: 60px;">
+          </div>
         </div>
       </div>
     </div>
-  <% end %>
+
+
+    <div id="journeynew" class="modal">
+      <div class="form-container add-journey-form">
+        <div class="form-box">
+          <h2>Add a new journey</h2>
+
+          <%= simple_form_for @journey do |f| %>
+
+            <div class="form-inputs">
+              <%= f.input :name, label: "Your journey's name", error: "Journey's name is mandatory, please specify one" %>
+              <%= f.input :start_date, label: 'Start Date', error: "Start date is mandatory, please specify them" %>
+              <%= f.input :end_date, label: 'End Date', error: "End date is mandatory, please specify them" %>
+              <%= f.input :photo %>
+              <%= f.input :photo_cache, as: :hidden %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Add Journey" %>
+            </div>
+          <% end %>
+
+          <%#= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
 </div>
 
-<%#= cl_image_path journey.photo, height: 300, width: 400, crop: :fill %>
+<%#= "#{new_journey_path(journey)}" %>

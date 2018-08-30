@@ -1,7 +1,7 @@
 <div class="full-width">
 
   <div class="left-area">
-    <div class="journey-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1526737511523-ba685f246e8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7673dbfb790ac307819fe5eec639da7b&auto=format&fit=crop&w=2691&q=80'); background-size: contain;">
+    <div class="journey-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @journey.photo, height: 200, crop: :fill %>'); background-size: cover; background-position: center;">
     <h1 class="journey-title"><%= @journey.name %></h1>
     </div>
     <div class="row">

@@ -39,4 +39,36 @@ a.card {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  margin: 1rem 0 1rem 0 !important;
+}
+
+.add-bottom {
+  height: 60px;
+  background: #e8e8e8;
+  z-index: 1;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+}
+
+.add-top {
+      background: #ccc;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.add-journey-button {
+    position: absolute;
+    bottom: -28px;
+    z-index: 2;
+}
+
+.btn-floating {
+  background-color: #5A5DAA !important;
+}
+
+.btn-floating:hover {
+  background-image: linear-gradient(to top, #A8AAE6 , #14153C) !important;
 }
