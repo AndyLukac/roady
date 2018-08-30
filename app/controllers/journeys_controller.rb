@@ -2,6 +2,7 @@ class JourneysController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @journeys = Journey.all
+    @journey = Journey.new
   end
 
   def show
@@ -27,7 +28,7 @@ class JourneysController < ApplicationController
     if @journey.save
       redirect_to journeys_path
     else
-      render :new
+      redirect_to root_path
     end
   end
 
@@ -44,7 +45,7 @@ class JourneysController < ApplicationController
   private
 
   def journey_params
-    params.require(:journey).permit(:name, :date, :photo)
+    params.require(:journey).permit(:name, :start_date, :end_date, :photo)
   end
 
   def flight_markers
