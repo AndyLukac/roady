@@ -54,13 +54,8 @@ ActiveRecord::Schema.define(version: 2018_08_29_133854) do
     t.string "name"
     t.bigint "user_id"
     t.string "photo"
-<<<<<<< HEAD
-    t.string "start_date"
-    t.string "end_date"
-=======
     t.date "start_date"
     t.date "end_date"
->>>>>>> master
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
