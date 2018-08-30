@@ -38,6 +38,7 @@ p {
   height: auto !important;
   border-radius: 20px;
   padding: 50px;
+  background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 65%), url("https://source.unsplash.com/collection/148531/1600x900") !important;
 }
 
 .form-box {
@@ -46,4 +47,8 @@ p {
 
 .modal {
   border-radius: 20px !important;
+}
+
+#journeynew {
+  top: 16% !important;
 }
