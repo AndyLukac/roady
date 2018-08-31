@@ -4,18 +4,19 @@
       <i class="large material-icons">airplanemode_active</i>
     </div>
     <div class="col s6">
-      <h5><%= flight.flight_number %></h5>
+      <h5><%= flight.departure_place %></h5>
+      <p>Flight.No: <%= flight.flight_number %></p>
       <p>Reservation: <%= flight.reservation_number %></p>
       <p>Departure: <%= flight.departure_place %></p>
       <p>Arrival: <%= flight.arrival_place %></p>
-      <p>Price: <%= flight.price %></p>
+      <p>Price: $ <%= flight.price %></p>
 
       <div class="journey-item-dates">
         <div class="arrival">
-          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= flight.arrival_date.strftime("%d.%m.%y") %></p>
+          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= flight.departure_date.strftime("%d.%m.%y - %H:%M") %></p>
         </div>
         <div class="departure">
-          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= flight.departure_date.strftime("%d.%m.%y") %></p>
+          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= flight.arrival_date.strftime("%d.%m.%y - %H:%M") %></p>
         </div>
       </div>
     </div>

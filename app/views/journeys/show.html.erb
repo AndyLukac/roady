@@ -4,7 +4,7 @@
     <div class="journey-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @journey.photo, height: 200, crop: :fill %>'); background-size: cover; background-position: center;">
         <h6 style="color: #fff;"><%= @journey.start_date.strftime("%d.%m.%y") %></h6>
         <h2 class="journey-title"><%= @journey.name %></h2>
-        <h6 style="color: #fff;"><%= @journey.start_date.strftime("%d.%m.%y") %></h6>
+        <h6 style="color: #fff;"><%= @journey.end_date.strftime("%d.%m.%y") %></h6>
     </div>
     <div class="row" style="margin-bottom: 0px !important;">
       <div class="col s12 full-width-tabs">
@@ -25,7 +25,11 @@
           <%= render flight %>
         <% end %>
       </div>
-      <div id="trains" class="col s12">Test 3</div>
+      <div id="trains" class="col s12">
+        <% @journey.trains.each do |train| %>
+          <%= render train %>
+        <% end %>
+      </div>
       <div id="cars" class="col s12">Test 4</div>
       </div>
   </div>
