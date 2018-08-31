@@ -9,7 +9,7 @@
 
     <% if user_signed_in? %>
 
-      <%= link_to "+ Add a journey", "#", class: "navbar-item navbar-link" %>
+      <%= link_to "My journeys", journeys_path, class: "navbar-item navbar-link" %>
       <%= link_to "Mails", "#", class: "navbar-item navbar-link" %>
       <%= link_to "My profil", "#", class: "navbar-item navbar-link" %>
       <%= link_to destroy_user_session_path, class: "navbar-item navbar-link", method: :delete do %>
