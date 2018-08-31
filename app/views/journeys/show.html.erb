@@ -20,7 +20,11 @@
           <%= render accommodation %>
         <% end %>
       </div>
-      <div id="flights" class="col s12">Test 2</div>
+      <div id="flights" class="col s12">
+        <% @journey.flights.each do |flight| %>
+          <%= render flight %>
+        <% end %>
+      </div>
       <div id="trains" class="col s12">Test 3</div>
       <div id="cars" class="col s12">Test 4</div>
       </div>
