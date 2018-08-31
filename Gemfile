@@ -6,7 +6,8 @@ gem 'carrierwave'
 
 gem "geocoder"
 
-
+gem 'griddler'
+gem 'griddler-sendgrid'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'

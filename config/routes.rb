@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  mount_griddler
   root to: 'pages#home'
   resources :journeys, only: [:index, :show, :new, :create, :edit, :update] do
     resources :accommodation, only: [:index, :show]
