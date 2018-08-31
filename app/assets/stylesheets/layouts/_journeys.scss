@@ -27,6 +27,18 @@
   overflow: scroll;
 }
 
+#flight {
+  display: block;
+  max-height: calc(100vh - 370px);
+  overflow: scroll;
+}
+
+#train {
+  display: block;
+  max-height: calc(100vh - 370px);
+  overflow: scroll;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;

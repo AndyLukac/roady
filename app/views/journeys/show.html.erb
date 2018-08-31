@@ -10,9 +10,9 @@
       <div class="col s12 full-width-tabs">
         <ul class="tabs">
           <li class="tab col s3"><a class="active" href="#accommodation">Accommodation</a></li>
-          <li class="tab col s3"><a href="#flights">Flights</a></li>
-          <li class="tab col s3"><a href="#trains">Trains</a></li>
-          <li class="tab col s3"><a href="#cars">Cars</a></li>
+          <li class="tab col s3"><a href="#flight">Flights</a></li>
+          <li class="tab col s3"><a href="#train">Trains</a></li>
+          <li class="tab col s3"><a href="#car">Cars</a></li>
         </ul>
       </div>
       <div id="accommodation" class="col s12">
@@ -20,18 +20,19 @@
           <%= render accommodation %>
         <% end %>
       </div>
-      <div id="flights" class="col s12">
+      <div id="flight" class="col s12">
         <% @journey.flights.each do |flight| %>
           <%= render flight %>
         <% end %>
       </div>
-      <div id="trains" class="col s12">
+      <div id="train" class="col s12">
         <% @journey.trains.each do |train| %>
           <%= render train %>
         <% end %>
       </div>
-      <div id="cars" class="col s12">Test 4</div>
+      <div id="car" class="col s12">Test 4
       </div>
+    </div>
   </div>
 
   <div class="right-area">
