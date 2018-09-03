@@ -1,24 +1,14 @@
-<div class="row hover-bg" style="margin-bottom: 0px !important;">
-  <div class="journey-item-row">
-    <div class="col s4">
-      <div class="flight-departure">
-        <h6><%= flight.departure_place %></h6>
-        <h6 class="time"><%= flight.departure_date.strftime("%b %d, %-Y") %></h6>
-        <h6 class="time"><%= flight.departure_date.strftime("%H:%M") %></h6>
-      </div>
-    </div>
-    <div class="col s4 plane-info">
-      <div class="flight-info">
-        <i class="small material-icons plane-icon">airplanemode_active</i>
-        <h6><%= flight.flight_number %></h6>
-      </div>
-    </div>
-    <div class="col s4">
-      <div class="flight-arrival">
-        <h6><%= flight.arrival_place %></h6>
-        <h6 class="time"><%= flight.arrival_date.strftime("%b %d, %-Y") %></h6>
-        <h6 class="time"><%= flight.arrival_date.strftime("%H:%M") %></h6>
-      </div>
-    </div>
+<div class="journey-item flight">
+  <div class="journey-item-illustration">
+    <i class="small material-icons plane-icon">airplanemode_active</i>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= flight.departure_place %> <span>→</span> <%= flight.arrival_place %></h3>
+    <h4 class="time">
+      <%= flight.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= flight.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= flight.flight_number %></h6>
   </div>
 </div>

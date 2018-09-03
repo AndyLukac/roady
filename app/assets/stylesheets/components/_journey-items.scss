@@ -1,0 +1,53 @@
+.journey-item {
+  display: flex;
+  padding: 15px;
+
+  &:hover {
+    background: #3e51b512;
+  }
+
+  .journey-item-illustration {
+    margin-right: 30px;
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 3em !important;
+    }
+  }
+
+  .journey-item-main-informations {
+    flex-grow: 1;
+
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      font-weight: 500 !important;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 400 !important;
+      color: #999;
+      margin-top: 0.5rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: normal !important;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+
+      i {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

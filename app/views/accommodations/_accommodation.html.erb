@@ -1,31 +1,17 @@
-<div class="row hover-bg" style="margin-bottom: 0px !important;">
-  <div class="journey-item-row">
-    <div class="col s4 journey-item-image">
-      <%= image_tag("airbnb.png", width: "225", class: "image-radius") %>
-    </div>
-    <div class="col s3">
-      <div class="journey-item-details">
-        <h6><%= accommodation.name %></h6>
-        <p style="line-height: 1.25em"><%= accommodation.address %></p>
-        <p><%= accommodation.telephone %></p>
-        <p>Owner: <%= accommodation.owner %></p>
-        <p>Guests: <%= accommodation.guests %></p>
-        <p>Price: $ <%= accommodation.price %></p>
-        <p>Reservation No.: <%= accommodation.reservation_number %></p>
-      </div>
-    </div>
-    <div class="col s5">
-      <div class="journey-item-dates">
-        <div class="arrival">
-          <h6><%= accommodation.arrival_date.strftime("%b %d, %-Y") %></h6>
-          <p> Check-in:   <%= accommodation.arrival_date.strftime("%R") %></p>
-        </div>
-        <span style="font-size: 50px; color: #e2e2e2;">/</span>
-        <div class="departure">
-         <h6><%= accommodation.departure_date.strftime("%b %d, %Y") %></h6>
-         <p>Check-out:  <%= accommodation.departure_date.strftime("%R") %></p>
-        </div>
-      </div>
-    </div>
+<div class="journey-item car">
+  <div class="journey-item-illustration">
+    <%= image_tag("airbnb.png", width: "150", class: "image-radius") %>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= accommodation.name %></h3>
+    <h4 class="time">
+      <%= accommodation.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= accommodation.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= accommodation.reservation_number %></h6>
+    <p>
+      <i class="small material-icons">place</i> <%= accommodation.address %>
+    </p>
   </div>
 </div>
