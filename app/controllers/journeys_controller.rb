@@ -64,19 +64,26 @@ class JourneysController < ApplicationController
           lat: journey_item.departure_latitude,
           lng: journey_item.departure_longitude,
           infoWindow: { content: journey_item.departure_place },
+          icon: image_path('pins.png')
         },
         {
           lat: journey_item.arrival_latitude,
           lng: journey_item.arrival_longitude,
           infoWindow: { content: journey_item.arrival_place },
+          icon: image_path('pins.png')
         }]
       else
         {
           lat: journey_item.latitude,
           lng: journey_item.longitude,
           infoWindow: { content: journey_item.name },
+          icon: image_path('pins.png')
         }
       end
     end
+  end
+
+  def image_path(name)
+    ActionController::Base.helpers.asset_path(name)
   end
 end
