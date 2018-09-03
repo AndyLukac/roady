@@ -1,9 +1,9 @@
 <div class="row hover-bg" style="margin-bottom: 0px !important;">
   <div class="journey-item-row">
-    <div class="col s6 journey-item-image">
-      <%= image_tag("airbnb.png", width: "300", class: "image-radius") %>
+    <div class="col s4 journey-item-image">
+      <%= image_tag("airbnb.png", width: "200", class: "image-radius") %>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <h5><%= accommodation.name %></h5>
       <p>Owner: <%= accommodation.owner %></p>
       <p>Address: <%= accommodation.address %></p>
@@ -11,13 +11,23 @@
       <p>Telephone: <%= accommodation.telephone %></p>
       <p>Price: $ <%= accommodation.price %></p>
       <p>Reservation No.: <%= accommodation.reservation_number %></p>
-
+    </div>
+    <div class="col s4">
       <div class="journey-item-dates">
         <div class="arrival">
-          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.arrival_date.strftime("%d.%m.%y") %></p>
+          <h6><%= accommodation.arrival_date.strftime("%d.%m.%y") %></h6>
+          <h6><%= accommodation.arrival_date.strftime("%R") %></h6>
+          <!-- <h6 style="font-weight: 500 !important;"><%= accommodation.arrival_date.strftime("%A") %></h6>
+          <h6 style="font-weight: 500 !important;"><%= accommodation.arrival_date.strftime("%B %d, %Y") %></h6>
+          <h6 style="font-weight: 500 !important;"><%= accommodation.arrival_date.strftime("%R") %></h6> -->
         </div>
+        <div><%= image_tag("diagonal.png", width: "100", class: "image-radius") %></div>
         <div class="departure">
-          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.departure_date.strftime("%d.%m.%y") %></p>
+          <h6><%= accommodation.departure_date.strftime("%d.%m.%y") %></h6>
+          <h6><%= accommodation.departure_date.strftime("%R") %></h6>
+         <!-- <h6 style="font-weight: 500 !important;"><%= accommodation.departure_date.strftime("%A") %></h6>
+         <h6 style="font-weight: 500 !important;"><%= accommodation.departure_date.strftime("%B %d, %Y") %></h6>
+         <h6 style="font-weight: 500 !important;"><%= accommodation.departure_date.strftime("%R") %></h6> -->
         </div>
       </div>
     </div>
