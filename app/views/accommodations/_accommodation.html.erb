@@ -1,23 +1,23 @@
-<div class="row" style="margin: 0;">
+<div class="row hover-bg" style="margin-bottom: 0px !important;">
   <div class="journey-item-row">
     <div class="col s6 journey-item-image">
-      <%= image_tag("airbnb", width: "300", class: "image-radius") %>
+      <%= image_tag("airbnb.png", width: "300", class: "image-radius") %>
     </div>
     <div class="col s6">
       <h5><%= accommodation.name %></h5>
       <p>Owner: <%= accommodation.owner %></p>
       <p>Address: <%= accommodation.address %></p>
       <p>Guests: <%= accommodation.guests %></p>
-      <p>Telepone: <%= accommodation.telephone %></p>
-      <p>Price: <%= accommodation.price %></p>
+      <p>Telephone: <%= accommodation.telephone %></p>
+      <p>Price: $ <%= accommodation.price %></p>
       <p>Reservation No.: <%= accommodation.reservation_number %></p>
 
       <div class="journey-item-dates">
         <div class="arrival">
-          <%= image_tag("arrival", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.arrival_date %></p>
+          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.arrival_date.strftime("%d.%m.%y") %></p>
         </div>
         <div class="departure">
-          <%= image_tag("departure", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.departure_date %></p>
+          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.departure_date.strftime("%d.%m.%y") %></p>
         </div>
       </div>
     </div>
