@@ -1,22 +1,24 @@
 <div class="row hover-bg" style="margin-bottom: 0px !important;">
   <div class="journey-item-row">
-    <div class="col s6 journey-item-image">
-      <i class="large material-icons">train</i>
-    </div>
-    <div class="col s6">
-      <h5><%= train.departure_place %></h5>
-      <p>Arrival: <%= train.arrival_place %></p>
-      <p>Reservation: <%= train.reservation_number %></p>
-      <p>Price: $ <%= train.price %></p>
-
-      <div class="journey-item-dates">
-        <div class="arrival">
-          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= train.departure_date.strftime("%d.%m.%y - %H:%M") %></p>
-        </div>
-        <div class="departure">
-          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= train.arrival_date.strftime("%d.%m.%y - %H:%M") %></p>
+    <div class="col s4">
+      <div class="flight-departure">
+        <h6><%= train.departure_place %></h6>
+        <h6 class="time"><%= train.departure_date.strftime("%b %d, %-Y") %></h6>
+        <h6 class="time"><%= train.departure_date.strftime("%H:%M") %></h6>
+      </div>
+      </div>
+      <div class="col s4 train-info">
+      <div class="train-info-div">
+        <i class="small material-icons">train</i>
+        <h6><%= train.reservation_number %></h6>
+      </div>
+      </div>
+      <div class="col s4">
+        <div class="flight-arrival">
+          <h6><%= train.arrival_place %></h6>
+          <h6 class="time"><%= train.arrival_date.strftime("%b %d, %-Y") %></h6>
+          <h6 class="time"><%= train.arrival_date.strftime("%H:%M") %></h6>
         </div>
       </div>
-    </div>
   </div>
 </div>

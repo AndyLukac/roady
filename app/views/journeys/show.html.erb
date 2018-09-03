@@ -9,11 +9,17 @@
     <div class="row" style="margin-bottom: 0px !important;">
       <div class="col s12 full-width-tabs">
         <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#accommodation">Accommodation</a></li>
-          <li class="tab col s3"><a href="#flight">Flights</a></li>
-          <li class="tab col s3"><a href="#train">Trains</a></li>
-          <li class="tab col s3"><a href="#car">Cars</a></li>
+          <li class="tab col s4"><a class="journey-icons active" href="#overview">Overview</a></li>
+          <li class="tab col s2"><a class="journey-icons" href="#accommodation"><%= image_tag("icon-flat.svg", width: "25") %></a></li>
+          <li class="tab col s2"><a class="journey-icons" href="#flight"><%= image_tag("icon-flight.svg", width: "25") %></a></li>
+          <li class="tab col s2"><a class="journey-icons" href="#train"><%= image_tag("icon-train.svg", width: "30") %></a></li>
+          <li class="tab col s2"><a class="journey-icons" href="#car"><%= image_tag("icon-car.svg", width: "30") %></a></li>
         </ul>
+      </div>
+      <div id="overview" class="col s12">
+        <% @journey_items.each do |journey_item| %>
+          <%= render journey_item %>
+        <% end %>
       </div>
       <div id="accommodation" class="col s12">
         <% @journey.accommodations.each do |accommodation| %>
@@ -30,7 +36,10 @@
           <%= render train %>
         <% end %>
       </div>
-      <div id="car" class="col s12">Test 4
+      <div id="car" class="col s12">
+        <% @journey.cars.each do |car| %>
+          <%= render car %>
+        <% end %>
       </div>
     </div>
   </div>
