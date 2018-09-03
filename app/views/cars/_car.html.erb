@@ -1,28 +1,14 @@
-<div class="row hover-bg" style="margin-bottom: 0px !important;">
-  <div class="journey-item-row">
-    <div class="col s3 journey-item-image">
-      <%= image_tag("car.png", width: "150", class: "image-radius") %>
-    </div>
-    <div class="col s3">
-      <div class="car-pickup">
-        <h6><%= car.departure_place %></h6>
-        <h6 class="time"><%= car.departure_date.strftime("%b %d, %-Y") %></h6>
-        <h6 class="time"> <%= car.departure_date.strftime("%R") %></p>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="car-details">
-        <i class="small material-icons">directions_car</i>
-        <h6 style="margin: 0;"><%= car.reservation_number %></h6>
-        <p><%= car.brand %></p>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="departure">
-        <h6><%= car.arrival_place %></h6>
-        <h6 class="time"><%= car.arrival_date.strftime("%b %d, %Y") %></h6>
-        <h6 class="time"><%= car.arrival_date.strftime("%R") %></h6>
-      </div>
-    </div>
+<div class="journey-item car">
+  <div class="journey-item-illustration">
+    <%= image_tag("car.png", width: "150", class: "image-radius") %>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= car.departure_place %> <span>→</span> <%= car.arrival_place %></h3>
+    <h4 class="time">
+      <%= car.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= car.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= car.reservation_number %></h6>
   </div>
 </div>

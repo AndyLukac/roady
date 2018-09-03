@@ -1,24 +1,14 @@
-<div class="row hover-bg" style="margin-bottom: 0px !important;">
-  <div class="journey-item-row">
-    <div class="col s4">
-      <div class="flight-departure">
-        <h6><%= train.departure_place %></h6>
-        <h6 class="time"><%= train.departure_date.strftime("%b %d, %-Y") %></h6>
-        <h6 class="time"><%= train.departure_date.strftime("%H:%M") %></h6>
-      </div>
-      </div>
-      <div class="col s4 train-info">
-      <div class="train-info-div">
-        <i class="small material-icons">train</i>
-        <h6><%= train.reservation_number %></h6>
-      </div>
-      </div>
-      <div class="col s4">
-        <div class="flight-arrival">
-          <h6><%= train.arrival_place %></h6>
-          <h6 class="time"><%= train.arrival_date.strftime("%b %d, %-Y") %></h6>
-          <h6 class="time"><%= train.arrival_date.strftime("%H:%M") %></h6>
-        </div>
-      </div>
+<div class="journey-item train">
+  <div class="journey-item-illustration">
+    <i class="small material-icons">train</i>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= train.departure_place %> <span>→</span> <%= train.arrival_place %></h3>
+    <h4 class="time">
+      <%= train.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= train.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= train.reservation_number %></h6>
   </div>
 </div>
