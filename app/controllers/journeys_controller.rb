@@ -63,18 +63,18 @@ class JourneysController < ApplicationController
         [{
           lat: journey_item.departure_latitude,
           lng: journey_item.departure_longitude,
-          infoWindow: { content: journey_item.departure_place },
+          infoWindow: { content: "#{journey_item.departure_place} - #{journey_item.departure_date}" },
         },
         {
           lat: journey_item.arrival_latitude,
           lng: journey_item.arrival_longitude,
-          infoWindow: { content: journey_item.arrival_place },
+          infoWindow: { content: "#{journey_item.arrival_place} - #{journey_item.arrival_date}" },
         }]
       else
         {
           lat: journey_item.latitude,
           lng: journey_item.longitude,
-          infoWindow: { content: journey_item.name },
+          infoWindow: { content: "#{journey_item.name} - $#{journey_item.price}"},
         }
       end
     end
