@@ -16,15 +16,14 @@
 
 #map {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   position: relative;
   overflow: hidden;
 }
 
-
 #accommodation, #flight, #train, #car, #overview {
   display: block;
-  max-height: calc(100vh - 370px);
+  max-height: calc(100vh - 288px);
   overflow: scroll;
 }
 
@@ -61,7 +60,13 @@ p {
 @media screen and (max-width: 1280px) {
   #accommodation, #flight, #train, #car, #overview {
     display: block;
-    height: calc(100vh - 268px);
+    max-height: calc(100vh - 268px);
     overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #map {
+    height: calc(100vh - 100px);
   }
 }
