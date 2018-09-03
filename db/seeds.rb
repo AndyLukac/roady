@@ -100,7 +100,7 @@ Accommodation.create!(
   reservation_number: "RESA1",
   arrival_date: DateTime.parse("10/09/2018 05:00pm"),
   departure_date: DateTime.parse("14/09/2018 10:00am"),
-  name: "Beautiful 2 bedroom appartment in Palermo district",
+  name: "Palermo district",
   owner: "Juan Andreas",
   address: "4517 Juan Francisco Seguí, Buenos Aires",
   guests: 1,

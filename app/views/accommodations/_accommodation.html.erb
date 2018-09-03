@@ -1,23 +1,29 @@
 <div class="row hover-bg" style="margin-bottom: 0px !important;">
   <div class="journey-item-row">
-    <div class="col s6 journey-item-image">
-      <%= image_tag("airbnb.png", width: "300", class: "image-radius") %>
+    <div class="col s4 journey-item-image">
+      <%= image_tag("airbnb.png", width: "225", class: "image-radius") %>
     </div>
-    <div class="col s6">
-      <h5><%= accommodation.name %></h5>
-      <p>Owner: <%= accommodation.owner %></p>
-      <p>Address: <%= accommodation.address %></p>
-      <p>Guests: <%= accommodation.guests %></p>
-      <p>Telephone: <%= accommodation.telephone %></p>
-      <p>Price: $ <%= accommodation.price %></p>
-      <p>Reservation No.: <%= accommodation.reservation_number %></p>
-
+    <div class="col s3">
+      <div class="journey-item-details">
+        <h6><%= accommodation.name %></h6>
+        <p style="line-height: 1.25em"><%= accommodation.address %></p>
+        <p><%= accommodation.telephone %></p>
+        <p>Owner: <%= accommodation.owner %></p>
+        <p>Guests: <%= accommodation.guests %></p>
+        <p>Price: $ <%= accommodation.price %></p>
+        <p>Reservation No.: <%= accommodation.reservation_number %></p>
+      </div>
+    </div>
+    <div class="col s5">
       <div class="journey-item-dates">
         <div class="arrival">
-          <%= image_tag("arrival.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.arrival_date.strftime("%d.%m.%y") %></p>
+          <h6><%= accommodation.arrival_date.strftime("%b %d, %-Y") %></h6>
+          <p> Check-in:   <%= accommodation.arrival_date.strftime("%R") %></p>
         </div>
+        <span style="font-size: 50px; color: #e2e2e2;">/</span>
         <div class="departure">
-          <%= image_tag("departure.png", width: "20", class: "dates-icon")%><p style="font-style: italic;"><%= accommodation.departure_date.strftime("%d.%m.%y") %></p>
+         <h6><%= accommodation.departure_date.strftime("%b %d, %Y") %></h6>
+         <p>Check-out:  <%= accommodation.departure_date.strftime("%R") %></p>
         </div>
       </div>
     </div>
