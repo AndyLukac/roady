@@ -16,26 +16,25 @@
 
 #map {
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
 }
 
 #accommodation {
-  display: block;
-  max-height: calc(100vh - 370px);
+  height: calc(100vh - 268px);
   overflow: scroll;
 }
 
 #flight {
   display: block;
-  max-height: calc(100vh - 370px);
+  height: calc(100vh - 268px);
   overflow: scroll;
 }
 
 #train {
   display: block;
-  max-height: calc(100vh - 370px);
+  height: calc(100vh - 268px);
   overflow: scroll;
 }
 
