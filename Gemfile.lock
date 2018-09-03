@@ -251,6 +251,7 @@ DEPENDENCIES
   material_icons
   materialize-form
   materialize-sass (~> 1.0.0.rc2)
+  nokogiri
   pg (~> 0.21)
   pry-byebug
   pry-rails
