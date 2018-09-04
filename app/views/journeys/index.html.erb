@@ -2,7 +2,7 @@
   <h1 style="text-align:center; margin: 0px; padding: 50px 0;"> My Journeys </h1>
     <div class="row" style="margin: 0;">
   <% @journeys.each do |journey| %>
-      <div class="col s4 m4">
+      <div class="col s12 m6 l4">
             <%#= cl_image_tag journey.photo %>
         <a href=<%= "#{journey_path(journey)}" %>
         <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path journey.photo, height: 300, width: 400, crop: :fill %>'); background-size: cover;">
@@ -10,14 +10,14 @@
           <h2><%= journey.name %></h2>
         </div>
         <div class="journey-dates">
-          <h5><%= journey.start_date.strftime("%d.%m.%y") %></h5>
-          <i class="far fa-calendar-alt" style="font-size: 25px;"></i>
-          <h5><%= journey.end_date.strftime("%d.%m.%y") %></h5>
+          <h6><%= journey.start_date.strftime("%d.%m.%y") %></h6>
+          <i class="far fa-calendar-alt" style="font-size: 22px;"></i>
+          <h6><%= journey.end_date.strftime("%d.%m.%y") %></h6>
         </div>
         </a>
       </div>
       <% end %>
-      <div class="col s4 m4">
+      <div class="col s12 m6 l4">
         <%#= cl_image_tag journey.photo %>
         <div class="card add-journey" style="background:#ccc;">
           <div class="add-top" style="height: 180px;">
