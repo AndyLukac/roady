@@ -17,9 +17,17 @@
 .journey-banner {
   width: 100%;
   height: 150px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.add-friend-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
 }
 
 #map {
