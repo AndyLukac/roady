@@ -1,20 +1,62 @@
 .datepicker-container {
-  .datepicker-day-button {
-    color: black !important;
-  }
-
-  .is-today {
-    color: red !important;
-  }
-
-  .date-text {
-    font-size: 16px !important;
-  }
-
-  .select-month {
-    color: black !important;
-  }
-
-
-
+  color: $primary-color-light;
 }
+
+.datepicker-date-display {
+  background-color: $primary-color-dark;
+}
+
+.select-dropdown .dropdown-trigger {
+  font-size: 14px;
+}
+
+.is-today {
+  color: $primary-color-dark !important;
+  border-bottom: 1px solid $primary-color-dark;
+}
+
+.datepicker-table td.is-selected {
+  color: white;
+  background-color: $primary-color;
+}
+
+ .datepicker-controls .select-month input {
+  width: 100px;
+  color: $primary-color-dark !important;
+ }
+
+.select-year input {
+  color: $primary-color-dark !important;
+}
+
+// .datepicker-day-button {
+//   color: $primary-color-light;
+// }
+// .datepicker-day-button.is-today {
+//   color: $primary-color-dark;
+// }
+// .datepicker-table td.is-selected{
+//   color: white;
+//   background-color: $primary-color;
+// }
+// .year-text {
+//   font-size: 32px;
+// }
+// .date-text {
+//   font-size: 24px;
+// }
+// .datepicker-date-display {
+//   background-color: $primary-color-dark;
+// }
+// .month-next {
+//   color: $primary-color-dark;
+// }
+// .month-prev {
+//   color: $primary-color-dark;
+// }
+
+// .select-dropdown .dropdown-trigger {
+//   color: $primary-color-dark !important;
+//   font-size: 14px;
+// }
+

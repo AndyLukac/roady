@@ -137,7 +137,7 @@ $chip-margin: 5px !default;
 $datepicker-display-font-size: 1.5rem;
 $datepicker-calendar-header-color: #999;
 $datepicker-weekday-color: rgba(0, 0, 0, .87) !default;
-$datepicker-weekday-bg: darken($secondary-color, 7%) !default;
+$datepicker-weekday-bg: darken($primary-color, 7%) !default;
 $datepicker-date-bg: $secondary-color !default;
 $datepicker-year: rgba(255, 255, 255, .7) !default;
 $datepicker-focus: rgba(0,0,0, .05) !default;
