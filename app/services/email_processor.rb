@@ -19,6 +19,8 @@ class EmailProcessor
   end
 
   def booking?
+    puts "je usi sla"
+    puts File.write('db/emails/expedia.html', @email.raw_html)
   end
 end
 
