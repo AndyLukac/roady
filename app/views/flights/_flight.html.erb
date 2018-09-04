@@ -1,0 +1,14 @@
+<div class="journey-item flight" data-lat="<%= flight.departure_latitude %>" data-long="<%= flight.departure_longitude %>">
+  <div class="journey-item-illustration">
+    <i class="small material-icons plane-icon">airplanemode_active</i>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= flight.departure_place %> <span>→</span> <%= flight.arrival_place %></h3>
+    <h4 class="time">
+      <%= flight.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= flight.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= flight.flight_number %></h6>
+  </div>
+</div>

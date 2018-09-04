@@ -1,0 +1,14 @@
+<div class="journey-item car" data-lat="<%= car.departure_latitude %>" data-long="<%= car.departure_longitude %>">
+  <div class="journey-item-illustration">
+    <%= image_tag("car.png", width: "150", class: "image-radius") %>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= car.departure_place %> <span>→</span> <%= car.arrival_place %></h3>
+    <h4 class="time">
+      <%= car.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= car.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= car.reservation_number %></h6>
+  </div>
+</div>

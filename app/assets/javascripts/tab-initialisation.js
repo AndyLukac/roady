@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.getElementById("open-modal-new").addEventListener('click', function() {
-  var elems = document.querySelector('.modal');
-  var instances = M.Modal.init(elems, {});
-  instances.open();
-});
+const modalNew = document.getElementById("open-modal-new")
+if (modalNew) {
+  modalNew.addEventListener('click', function() {
+    var elems = document.querySelector('.modal');
+    var instances = M.Modal.init(elems, {});
+    instances.open();
+  });
+}

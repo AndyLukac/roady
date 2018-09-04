@@ -82,6 +82,13 @@ GEM
     geocoder (1.5.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    griddler (1.5.2)
+      htmlentities
+      rails (>= 3.2.0)
+    griddler-sendgrid (1.1.0)
+      griddler (>= 1.5.2)
+      mail (>= 2.7.0)
+    htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.1.0)
@@ -237,6 +244,8 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass (~> 5.0.9)
   geocoder
+  griddler
+  griddler-sendgrid
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   material_icons

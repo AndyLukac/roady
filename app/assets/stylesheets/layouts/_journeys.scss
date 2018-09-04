@@ -14,6 +14,22 @@
   width: 50%;
 }
 
+.journey-banner {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.add-friend-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
+}
+
 #map {
   width: 100%;
   height: calc(100vh - 120px);
@@ -21,10 +37,11 @@
   overflow: hidden;
 }
 
-#accommodation {
+#accommodation, #flight, #train, #car, #overview {
   display: block;
-  max-height: calc(100vh - 370px);
+  max-height: calc(100vh - 318px);
   overflow: scroll;
+  padding: 0;
 }
 
 p {
@@ -38,7 +55,7 @@ p {
   height: auto !important;
   border-radius: 20px;
   padding: 50px;
-  background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 65%), url("https://source.unsplash.com/collection/148531/1600x900") !important;
+  background-image: url("https://source.unsplash.com/collection/148531/1600x900") !important;
 }
 
 .form-box {
@@ -51,4 +68,30 @@ p {
 
 #journeynew {
   top: 16% !important;
+}
+
+.hover-bg:hover {
+  background: #3e51b512;
+}
+
+@media screen and (max-width: 1280px) {
+  #accommodation, #flight, #train, #car, #overview {
+    display: block;
+    max-height: calc(100vh - 268px);
+    overflow: scroll;
+  }
+
+  .journey-banner {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #map {
+    height: calc(100vh - 100px);
+  }
 }

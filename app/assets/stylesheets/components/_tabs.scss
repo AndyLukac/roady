@@ -3,6 +3,12 @@
   padding: 0 !important;
 }
 
+.journey-icons {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .journey-item-row {
   padding: 30px 0px;
   display: flex;
@@ -20,18 +26,60 @@
 }
 
 .journey-item-dates {
+  height: 100%;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flight-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.train-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-details {
+  text-align: center;
+}
+
+.car-pickup {
+  text-align: right;
+}
+
+.train-info-div {
+  text-align: center;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+.plane-info {
+  display: flex;
+  justify-content: center;
+}
+
+h6.time {
+  font-weight: 500 !important;
+  color: #afafaf;
+}
+
+.plane-icon {
+  transform: rotate(90deg);
 }
 
 .arrival {
-  display: flex;
-  align-items: center;
-  margin-right: 25px;
 }
 
-.departure {
-  display: flex;
-  align-items: center;
+.flight-departure {
+  text-align: right;
 }
 
 .dates-icon {

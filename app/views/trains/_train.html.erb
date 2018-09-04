@@ -1,0 +1,14 @@
+<div class="journey-item train" data-lat="<%= train.departure_latitude %>" data-long="<%= train.departure_longitude %>">
+  <div class="journey-item-illustration">
+    <i class="small material-icons">train</i>
+  </div>
+  <div class="journey-item-main-informations">
+    <h3><%= train.departure_place %> <span>→</span> <%= train.arrival_place %></h3>
+    <h4 class="time">
+      <%= train.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <span>→</span>
+      <%= train.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+    </h4>
+    <h6><%= train.reservation_number %></h6>
+  </div>
+</div>
