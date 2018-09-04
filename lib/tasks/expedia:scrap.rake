@@ -1,18 +1,18 @@
-namespace :airbnb do
+namespace :expedia do
   task scrap: :environment do
-    html = File.open("#{Rails.root}/db/emails/airbnb.html").read
+    html = File.open("#{Rails.root}/db/emails/expedia.html").read
 
-    email = FalseEmail.new('nayeli@gmail.com', 'argentina@roady.club', html)
+    email = FakeEmail.new('nayeli@gmail.com', 'argentina@roady.club', html)
     EmailProcessor.new(email).process
   end
 end
 
-class FalseEmail
+class FakeEmail
   attr_reader :from, :to, :raw_html
 
   def initialize(from, to, raw_html)
     @from = from
-    @to = [to]
+    @to = to
     @raw_html = raw_html
   end
 end

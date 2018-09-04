@@ -4,13 +4,21 @@ class EmailProcessor
   end
 
   def process
-
-    # email = Email.create(body: @email.raw_html, to: @email.to, from: @email.from)
-    html_doc  = Nokogiri::HTML(@email.raw_html)
-    html_doc.search('.m_7518718864441798498headline').each do |element|
-      puts "-------------------------------------"
-      p name = element.text
+    if airbnb?
+      AirbnbScrapper.new(@email).scrap
+    elsif booking?
     end
+  end
+
+  private
+
+  def airbnb?
+    html_doc = Nokogiri::HTML(@email.raw_html)
+    airbnb = html_doc.search('/html/body/div/div/div[1]/strong').text.strip
+    airbnb == "Airbnb"
+  end
+
+  def booking?
   end
 end
 
