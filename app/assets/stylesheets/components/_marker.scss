@@ -1,0 +1,49 @@
+.marker-card {
+}
+
+.marker-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.marker-icon {
+  position: absolute;
+  right: 0;
+  font-size: 1.6rem !important;
+}
+
+.dep-place, .arr-place {
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+
+.dep-date, .arr-date, .checkin, .checkout {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.journey-name, .journey-add {
+  margin-bottom: 5px;
+}
+
+.marker-card p {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+
+.checkin, .checkout {
+  display: flex;
+  align-items: center;
+}
+
+.checkin p, .checkout p {
+  margin-right: 10px;
+}
+
+.gm-style-iw {
+  padding: 5px 10px 10px 5px;
+}

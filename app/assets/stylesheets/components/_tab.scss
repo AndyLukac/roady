@@ -1,0 +1,75 @@
+$base-margin: 20px;
+$tab-height: 35px;
+$tab-border-radius: 35px;
+
+.marker-card {
+  padding: 10px 5px 0 0;
+}
+
+.tab-slider--nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.tab-slider--tabs{
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  border-radius: $tab-border-radius;
+  overflow: hidden;
+  background: #fff;
+  height: $tab-height;
+  user-select: none;
+  &:after{
+    content: "";
+    width: 50%;
+    background: $primary-color-dark;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 250ms ease-in-out;
+    border-radius: $tab-border-radius;
+  }
+  &.slide:after{
+    left: 50%;
+  }
+}
+
+.tab-slider--trigger {
+  font-size: 10px;
+  line-height: 2.5;
+  font-weight: bold;
+  color: $primary-color-dark;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 15px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+  user-select: none;
+  &.active {
+    color: #fff;
+  }
+}
+.tab-slider--body{
+  margin-bottom: 5px;
+}
+
+.tab-slider--container {
+  padding: 5px;
+}
+
+.tab-slider--container .tab-slider--body:first-child {
+  display: block;
+}
+
+.tab-slider--container .tab-slider--body {
+  display: none;
+}
