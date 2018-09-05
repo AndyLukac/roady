@@ -6,7 +6,6 @@ class CreateJourneyItems < ActiveRecord::Migration[5.2]
       t.string :address
       t.integer :guests
       t.integer :price
-      t.integer :telephone
       t.string :flight_number
       t.string :reservation_number
       t.string :departure_date

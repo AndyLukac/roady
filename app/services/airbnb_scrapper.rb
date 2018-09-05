@@ -14,6 +14,9 @@ class AirbnbScrapper
     price = html_doc.search('/html/body/div/div/div[2]/table/tbody/tr/td/center/table/tbody/tr/td/div[11]/table/tbody/tr/th[1]/p[2]').text.gsub(/\P{ASCII}/,'').strip
     arrival_date = html_doc.search('/html/body/div/div/div[2]/table/tbody/tr/td/center/table/tbody/tr/td/div[5]/table/tbody/tr/th[1]').text.gsub(/\P{ASCII}/,'').strip
     departure_date = html_doc.search('/html/body/div/div/div[2]/table/tbody/tr/td/center/table/tbody/tr/td/div[5]/table/tbody/tr/th[2]').text.gsub(/\P{ASCII}/,'').strip
+    image = html_doc.search('/html/body/div/div/div[2]/table/tbody/tr/td/center/table/tbody/tr/td/div[3]/table[1]/tbody/tr/th/a/img')[0]["src"]
+    check_in = html_doc.search('/html/body/div/div/div[2]/table/tbody/tr/td/center/table/tbody/tr/td/div[5]/table/tbody/tr/th[1]/p[3]').text.gsub(/\P{ASCII}/,'').strip
+    check_out = html_doc.search('/html/body/div/div/div[1]/table/tbody/tr/td/center/table/tbody/tr/td/div[5]/table/tbody/tr/th[3]/p[3]').text.gsub(/\P{ASCII}/,'').strip
     journey_email = @email.to
     journey_match = journey_email.first[:email].match(/^(.*?)\@/)
     journey_name = journey_match[1]
@@ -25,11 +28,6 @@ class AirbnbScrapper
     end
 
 
-    journey.accommodations.create!(name: "#{name}", owner: "#{owner}", reservation_number: "#{reservation_number}", address: "#{address}", guests: "#{guests}", telephone: "#{phone_number}", price: "#{price}", arrival_date: "#{arrival_date}", departure_date: "#{departure_date}")
-
-
-
-     # need to figure out how to look for :name case insensitive
-      # send accommodation to the journey
+    journey.accommodations.create!(name: "#{name}", owner: "#{owner}", reservation_number: "#{reservation_number}", address: "#{address}", guests: "#{guests}", telephone: "#{phone_number}", price: "#{price}", arrival_date: "#{arrival_date}", departure_date: "#{departure_date}", image: "#{image}", check_in: "#{check_in}", check_out: "#{check_out}")
   end
 end
