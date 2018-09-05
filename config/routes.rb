@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     resources :flight, only: [:index, :show]
     resources :train, only: [:index, :show]
   end
+  resources :notifications, only: [:index]
+
   get '/styleguide', to: 'pages#styleguide'
 end
