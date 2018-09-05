@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.full-height {
+  min-height: calc(100vh - 120px);
+}
+
 .left-area {
   width: 50%;
   height: auto;
@@ -74,7 +78,7 @@ p {
   background: #3e51b512;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1290px) {
   #accommodation, #flight, #train, #car, #overview {
     display: block;
     max-height: calc(100vh - 268px);
@@ -88,9 +92,12 @@ p {
     align-items: center;
     justify-content: space-around;
   }
+  .full-height {
+  min-height: calc(100vh - 100px);
+  }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1290px) {
   #map {
     height: calc(100vh - 100px);
   }

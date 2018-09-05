@@ -61,22 +61,31 @@ class JourneysController < ApplicationController
     @markers << @journey_items.map do |journey_item|
       if journey_item.type != 'Accommodation'
         [{
+          id: journey_item.id,
           lat: journey_item.departure_latitude,
           lng: journey_item.departure_longitude,
-          infoWindow: { content: "#{journey_item.departure_place} - #{journey_item.departure_date}" },
+          infoWindow: { content: render_to_string('../views/markers/_marker', layout: false, locals: { journey_item: journey_item }) },
           icon: image_path('pins.png')
         },
         {
           lat: journey_item.arrival_latitude,
           lng: journey_item.arrival_longitude,
-          infoWindow: { content: "#{journey_item.arrival_place} - #{journey_item.arrival_date}" },
+          infoWindow: { content: "" },
           icon: image_path('pins.png')
         }]
       else
         {
+          id: journey_item.id,
           lat: journey_item.latitude,
           lng: journey_item.longitude,
-          infoWindow: { content: "#{journey_item.name} - $#{journey_item.price}"},
+          infoWindow: { content: "
+            <div class='marker-card'>
+            <div class='marker-header'><i class='small material-icons marker-icon'>hotel</i><p>airbnb</p></div>
+            <div class='journey-name'>#{journey_item.name}</div>
+            <div class='journey-add'>#{journey_item.address}</div>
+            <div class='checkin'><p>Check-in:</p> #{journey_item.arrival_date.strftime("%b %d, %Y at %H:%M")}</div>
+            <div class='checkout'><p>Check-out:</p> #{journey_item.departure_date.strftime("%b %d, %Y at %H:%M")}</div>
+            </div>"},
           icon: image_path('pins.png')
         }
       end
