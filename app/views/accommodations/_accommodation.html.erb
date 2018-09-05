@@ -1,15 +1,18 @@
 <div class="journey-item car" data-lat="<%= accommodation.latitude %>" data-long="<%= accommodation.longitude %>" data-id="<%= accommodation.id %>">
   <div class="journey-item-illustration">
-    <%= image_tag("airbnb.png", width: "150", class: "image-radius") %>
+    <%= image_tag(accommodation.image, width: "150", class: "image-radius") %>
   </div>
   <div class="journey-item-main-informations">
     <h3><%= accommodation.name %></h3>
     <h4 class="time">
-      <%= accommodation.departure_date.strftime("%b %d, %Y at %H:%M") %>
+      <%= accommodation.arrival_date.strftime("%b %d, %Y") %>
       <span>→</span>
-      <%= accommodation.arrival_date.strftime("%b %d, %Y at %H:%M") %>
+      <%= accommodation.departure_date.strftime("%b %d, %Y") %>
     </h4>
-    <h6><%= accommodation.reservation_number %></h6>
+    <h6>Check-in Time: <%= accommodation.check_in %></h6>
+    <h6>Check-out Time: <%= accommodation.check_out %></h6>
+    <h6><%= accommodation.owner %></h6>
+    <h6>Phone number: <%= accommodation.telephone %></h6>
     <p>
       <i class="small material-icons">place</i> <%= accommodation.address %>
     </p>
