@@ -23,9 +23,10 @@
 
 @charset "UTF-8";
 
-// .full-height {
-//   height: calc(100vh - 120px);
-// }
+
+.full-height {
+  min-height: calc(100vh - 120px);
+}
 
 input[type=text]:not(.browser-default) {
   color: white;

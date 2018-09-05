@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+gem 'nokogiri'
 gem 'cloudinary'
 gem 'carrierwave'
-
 gem "geocoder"
-
 gem 'griddler'
 gem 'griddler-sendgrid'
 gem 'bootsnap', require: false
