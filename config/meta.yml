@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Roady"
+meta_title: "Roady - All your bookings in one place"
+meta_description: "Plan a trip has never been easier with Roady !"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
