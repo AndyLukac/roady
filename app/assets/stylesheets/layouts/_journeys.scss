@@ -68,6 +68,7 @@ p {
 
 .modal {
   border-radius: 20px !important;
+  width: 70% !important;
 }
 
 #journeynew {
@@ -92,6 +93,7 @@ p {
     align-items: center;
     justify-content: space-around;
   }
+  
   .full-height {
   min-height: calc(100vh - 100px);
   }
