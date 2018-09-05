@@ -6,7 +6,8 @@ class EmailProcessor
   def process
     if airbnb?
       AirbnbScrapper.new(@email).scrap
-    elsif booking?
+    elsif expedia?
+      ExpediaScrapper.new(@email).scrap
     end
   end
 
@@ -18,9 +19,12 @@ class EmailProcessor
     airbnb == "Airbnb"
   end
 
-  def booking?
-    puts "je usi sla"
-    puts File.write('db/emails/expedia.html', @email.raw_html)
+  def expedia?
+    html_doc = Nokogiri::HTML(@email.raw_html)
+    expedia = html_doc.search('/html/body/div/div/div[1]/strong').text.strip
+    expedia == "Expedia.fr"
+    # puts "je usi sla"
+    # puts File.write('db/emails/expedia.html', @email.raw_html)
   end
 end
 
