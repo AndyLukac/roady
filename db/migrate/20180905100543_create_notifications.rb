@@ -1,12 +1,10 @@
 class CreateNotifications < ActiveRecord::Migration[5.2]
   def change
     create_table :notifications do |t|
-      t.integer :recipient_id
-      t.integer :actor_id
-      t.datetime :read_at
-      t.string :action
-      t.integer :notifiable_id
-      t.string :notifiable_type
+      t.references :user, foreign_key: true
+      t.references :journey, foreign_key: true
+      t.boolean :read, default: false
+      t.text :message
 
       t.timestamps
     end

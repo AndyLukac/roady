@@ -65,12 +65,14 @@ class JourneysController < ApplicationController
           lat: journey_item.departure_latitude,
           lng: journey_item.departure_longitude,
           infoWindow: { content: render_to_string('../views/markers/_marker', layout: false, locals: { journey_item: journey_item }) },
-          icon: image_path('pins.png')
+          icon: {
+            url: 'pins.png'
+          }
         },
         {
           lat: journey_item.arrival_latitude,
           lng: journey_item.arrival_longitude,
-          infoWindow: { content: "" },
+          infoWindow: { content: render_to_string('../views/markers/_marker', layout: false, locals: { journey_item: journey_item }) },
           icon: image_path('pins.png')
         }]
       else
