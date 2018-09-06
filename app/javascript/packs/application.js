@@ -1,4 +1,5 @@
 import "bootstrap";
+import "./image";
 
 $("document").ready(function(){
   $(".tab-slider--body").hide();

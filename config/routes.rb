@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/image", to: "images#show"
+
   get '/styleguide', to: 'pages#styleguide'
 end
