@@ -20,3 +20,4 @@ $("#map").on('click', ".tab-slider--trigger", function() {
   $(".tab-slider--nav li").removeClass("active");
   $(this).addClass("active");
 });
+
