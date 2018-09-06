@@ -42,12 +42,12 @@ a.card {
   justify-content: center;
   border-radius: 20px;
   margin: 1rem 0 1rem 0 !important;
+  position: relative;
 }
 
 .add-bottom {
   height: 60px;
   background: #e8e8e8;
-  z-index: 1;
   border-radius: 0 0 20px 20px;
   width: 100%;
 }
@@ -61,6 +61,14 @@ a.card {
       justify-content: center;
 }
 
+a#open-modal-new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .add-journey-button {
     position: absolute;
     bottom: -28px;
@@ -71,6 +79,6 @@ a.card {
   background-color: #5A5DAA !important;
 }
 
-.btn-floating:hover {
+.card:hover .btn-floating {
   background-image: linear-gradient(to top, #A8AAE6 , #14153C) !important;
 }
