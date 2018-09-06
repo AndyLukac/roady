@@ -4,6 +4,7 @@ class Journey < ApplicationRecord
   has_many :flights
   has_many :trains
   has_many :cars
+  has_many :notifications
 
   mount_uploader :photo, PhotoUploader
 

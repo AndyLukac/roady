@@ -4,6 +4,7 @@ Car.destroy_all
 Train.destroy_all
 Accommodation.destroy_all
 Flight.destroy_all
+Notification.destroy_all
 Journey.destroy_all
 User.destroy_all
 
