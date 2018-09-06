@@ -28,7 +28,7 @@ class AirbnbScrapper
     journey.accommodations.create!(name: "#{name}", owner: "#{owner}", reservation_number: "#{reservation_number}", address: "#{address}", guests: "#{guests}", telephone: "#{phone_number}", price: "#{price}", arrival_date: "#{arrival_date}", departure_date: "#{departure_date}")
 
 
-    Notification.create(user: journey.user, journey: journey, message: "Your accommodation #{name} has been created")
+    Notification.create(user: journey.user, journey: journey, message: "Your accommodation #{name} has been created for #{journey.name}")
      # need to figure out how to look for :name case insensitive
       # send accommodation to the journey
   end
