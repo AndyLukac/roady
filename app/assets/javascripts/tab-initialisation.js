@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-const modalNew = document.getElementById("open-modal-new")
+var modalNew = document.getElementById("open-modal-new")
 if (modalNew) {
   modalNew.addEventListener('click', function() {
     var elems = document.querySelector('.modal');
