@@ -1,4 +1,4 @@
-const bell = document.querySelector('.dropdown-trigger')
+var bell = document.querySelector('.dropdown-trigger')
 if (bell) {
   bell.addEventListener('click', function() {
     var elems = document.querySelector('.dropdown-trigger');
