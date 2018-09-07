@@ -2,12 +2,12 @@ class Flight < JourneyItem
 
   # validates :go_arrival_date, presence: true
   # validates :go_departure_date, presence: true
-  validates :reservation_number, presence: true
-  validates :return_arrival_date, presence: true
-  validates :return_departure_date, presence: true
-  validates :price, presence: true
-  validates :go_flight_number, presence: true
-  validates :return_flight_number, presence: true
+  # validates :reservation_number, presence: true
+  # validates :return_arrival_date, presence: true
+  # validates :return_departure_date, presence: true
+  # validates :price, presence: true
+  # validates :go_flight_number, presence: true
+  # validates :return_flight_number, presence: true
 
   after_validation :fake_date_to_demoday
 
