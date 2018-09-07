@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" style="padding-bottom: 200px;">
   <h1 style="text-align:center; margin: 0px; padding: 50px 0;"> My Journeys </h1>
-    <div class="row" style="margin: 0;">
+    <div class="row" style="margin: 0; margin-bottom: 100px;">
   <% @journeys.each do |journey| %>
       <div class="col s12 m6 l4">
             <%#= cl_image_tag journey.photo %>
@@ -54,6 +54,11 @@
         </div>
       </div>
     </div>
+</div>
+<div class="how-to">
+  <h2>How it works ?</h2>
+  <h6>Once you have created a journey, directly send your reservation email to the name of your journey followed by @roady.club</h6>
+  <h6> Example: argentina@roady.club </h6>
 </div>
 
 <%#= "#{new_journey_path(journey)}" %>
