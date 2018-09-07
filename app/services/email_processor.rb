@@ -1,6 +1,4 @@
 class EmailProcessor
-  after_create :create_notification
-
   def initialize(email)
     @email = email
   end
