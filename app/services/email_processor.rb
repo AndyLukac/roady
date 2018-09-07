@@ -1,4 +1,6 @@
 class EmailProcessor
+  after_create :create_notification
+
   def initialize(email)
     @email = email
   end
@@ -30,4 +32,3 @@ class EmailProcessor
     # puts File.write('db/emails/expedia.html', @email.raw_html)
   end
 end
-

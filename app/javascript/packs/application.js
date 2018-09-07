@@ -1,4 +1,5 @@
 import "bootstrap";
+import "./image";
 
 $("document").ready(function(){
   $(".tab-slider--body").hide();
@@ -20,3 +21,4 @@ $("#map").on('click', ".tab-slider--trigger", function() {
   $(".tab-slider--nav li").removeClass("active");
   $(this).addClass("active");
 });
+

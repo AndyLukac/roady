@@ -8,8 +8,33 @@
   <div class="navbar-right">
 
     <% if user_signed_in? %>
+      <% nb_notification = current_user.unread_notifications.count %>
+      <div class="notif-nav">
+        <i class='material-icons small notification-bell dropdown-trigger' data-target='notifications'>notifications</i>
+        <% unless nb_notification == 0 %>
+          <span class="counter">
+            <%= nb_notification %>
+          </span>
+        <% end %>
+      </div>
+      <!-- Dropdown Structure -->
+      <ul id='notifications' class='dropdown-content top-navbar-height notif-width'>
+        <% if current_user.unread_notifications.count == 0 %>
+          <li class="no-notif">
+            <p>No notifications</p>
+          </li>
+        <% else %>
+          <% current_user.unread_notifications.each do |notification| %>
+            <li class="notif-list">
+              <%= link_to read_notification_path(notification), class: "notif-item", method: :patch do %>
+                <i class="material-icons small tick">check_circle</i>
+                <p><%= notification.message %></p>
+              <% end %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
 
-      <i class="material-icons small notification-bell">notifications</i>
       <%= link_to "My journeys", journeys_path, class: "navbar-item navbar-link" %>
       <%= link_to destroy_user_session_path, class: "navbar-item navbar-link", method: :delete do %>
         <%= t(".sign_out", default: "Log out") %>
@@ -17,7 +42,7 @@
 
       <!-- Profile picture -->
       <div class="navbar-item">
-        <%= image_tag "avatar.jpg", class: "avatar"%>
+        <%= image_tag "nayeli.jpg", class: "avatar"%>
       </div>
 
     <% else %>

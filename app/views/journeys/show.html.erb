@@ -1,7 +1,7 @@
 <div class="full-width">
 
   <div class="left-area">
-    <div class="journey-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @journey.photo, height: 200, crop: :fill %>'); background-size: cover; background-position: center;">
+    <div class="journey-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @journey.photo, width: 800, crop: :fill %>'); background-size: cover; background-position: center;">
         <h6 style="color: #fff;"><%= @journey.start_date.strftime("%d.%m.%y") %></h6>
         <h2 class="journey-title"><%= @journey.name %></h2>
         <h6 style="color: #fff;"><%= @journey.end_date.strftime("%d.%m.%y") %></h6>
@@ -9,8 +9,8 @@
     <div class="row" style="margin-bottom: 0px !important;">
       <div class="col s12 full-width-tabs">
         <ul class="tabs">
-          <li class="tab col s4"><a class="journey-icons active" href="#overview">Overview</a></li>
-          <li class="tab col s2"><a class="journey-icons" href="#accommodation"><%= image_tag("icon-flat.svg", width: "25") %></a></li>
+          <li class="tab col s4"><a class="journey-icons" href="#overview">Overview</a></li>
+          <li class="tab col s2"><a class="journey-icons active" href="#accommodation"><%= image_tag("icon-flat.svg", width: "25") %></a></li>
           <li class="tab col s2"><a class="journey-icons" href="#flight"><%= image_tag("icon-flight.svg", width: "25") %></a></li>
           <li class="tab col s2"><a class="journey-icons" href="#train"><%= image_tag("icon-train.svg", width: "30") %></a></li>
           <li class="tab col s2"><a class="journey-icons" href="#car"><%= image_tag("icon-car.svg", width: "30") %></a></li>

@@ -5,6 +5,7 @@
 }
 
 .full-height {
+  position: relative;
   min-height: calc(100vh - 120px);
 }
 
@@ -55,11 +56,12 @@ p {
   line-height: 0.75;
 }
 
-.add-journey-form {
+#journeynew .add-journey-form {
   height: auto !important;
   border-radius: 20px;
   padding: 50px;
-  background-image: url("https://source.unsplash.com/collection/148531/1600x900") !important;
+  background-position: center;
+  background-image: url("https://source.unsplash.com/collection/148531/1600x900");
 }
 
 .form-box {
@@ -93,7 +95,7 @@ p {
     align-items: center;
     justify-content: space-around;
   }
-  
+
   .full-height {
   min-height: calc(100vh - 100px);
   }

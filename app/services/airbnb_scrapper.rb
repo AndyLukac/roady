@@ -6,6 +6,7 @@ class AirbnbScrapper
   def scrap
 
     html_doc = Nokogiri::HTML(@email.raw_html)
+
     if !(@email.raw_html =~ /Avenue Des Aigrettes/)
       name = "Beach House" #html_doc.search('/html/body/div/div/div[1]/table/tbody/tr/td/center/table/tbody/tr/td/div[3]/table[2]/tbody/tr/th[1]/a/p[1]').text.strip
       reservation_number = "HMXC853X82" #html_doc.search('/html/body/div/div/div[1]/table/tbody/tr/td/center/table/tbody/tr/td/div[15]/table/tbody/tr/th[2]/p').text.strip
@@ -48,6 +49,10 @@ class AirbnbScrapper
       return nil
     end
 
+
+    Notification.create(user: journey.user, journey: journey, message: "Your accommodation #{name} has been created for #{journey.name}")
+     # need to figure out how to look for :name case insensitive
+      # send accommodation to the journey
 
     journey.accommodations.create!(name: "#{name}", owner: "#{owner}", reservation_number: "#{reservation_number}", address: "#{address}", guests: "#{guests}", telephone: "#{phone_number}", price: "#{price}", arrival_date: "#{arrival_date}", departure_date: "#{departure_date}", image: "#{image}", check_in: "#{check_in}", check_out: "#{check_out}")
   end

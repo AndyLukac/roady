@@ -37,7 +37,8 @@
 
     h6 {
       font-size: 1rem;
-      font-weight: normal !important;
+      font-weight: 100 !important;
+      color: #999;
     }
 
     p {
@@ -50,4 +51,23 @@
       }
     }
   }
+}
+
+.how-to {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: #5A5DAA !important;
+  width: 100%;
+  padding: 40px;
+  color: white;
+
+  h2 {
+    margin: 0;
+  }
+
+  h6 {
+    font-weight: 200 !important;
+  }
+
 }

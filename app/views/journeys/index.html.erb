@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" style="padding-bottom: 200px;">
   <h1 style="text-align:center; margin: 0px; padding: 50px 0;"> My Journeys </h1>
-    <div class="row" style="margin: 0;">
+    <div class="row" style="margin: 0; margin-bottom: 100px;">
   <% @journeys.each do |journey| %>
       <div class="col s12 m6 l4">
             <%#= cl_image_tag journey.photo %>
@@ -22,10 +22,11 @@
         <div class="card add-journey" style="background:#ccc;">
           <div class="add-top" style="height: 180px;">
           <h6> Add a journey </h6>
-          <a href="#journeynew" class="btn-floating btn-large btn modal-trigger add-journey-button modal-close" id="open-modal-new"><i class="material-icons">add</i></a>
+          <span  class="btn-floating btn-large btn modal-trigger add-journey-button modal-close"><i class="material-icons">add</i></span>
           </div>
           <div class="add-bottom" style="height: 60px;">
           </div>
+          <a id="open-modal-new" href="#journeynew"></a>
         </div>
       </div>
     </div>
@@ -42,8 +43,6 @@
               <%= f.input :name, label: "Your journey's name", error: "Journey's name is mandatory, please specify one" %>
               <%= f.input :start_date, input_html: { class: 'datepicker'}, label: 'Start Date', error: "Start date is mandatory, please specify them" %>
               <%= f.input :end_date, input_html: { class: 'datepicker'}, label: 'End Date', error: "End date is mandatory, please specify them" %>
-              <%= f.input :photo %>
-              <%= f.input :photo_cache, as: :hidden %>
             </div>
 
             <div class="form-actions">
@@ -55,6 +54,11 @@
         </div>
       </div>
     </div>
+</div>
+<div class="how-to">
+  <h2>How it works ?</h2>
+  <h6>Once you have created a journey, directly send your reservation email to the name of your journey followed by @roady.club</h6>
+  <h6> Example: argentina@roady.club </h6>
 </div>
 
 <%#= "#{new_journey_path(journey)}" %>

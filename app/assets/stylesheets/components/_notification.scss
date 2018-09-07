@@ -1,0 +1,112 @@
+.dropdown-content {
+  // left: 77% !important;
+  // top: 70px !important;
+  // width: 120px !important;
+  // border-radius: 10px;
+  // overflow-y: none !important;
+
+  &::before {
+    content: "\f0de";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 26px;
+    position: absolute;
+    left: 7px;
+    top: -15px;
+    color:white;
+  }
+  &:hover:before {
+    color: #ececec !important;
+  }
+}
+
+.notif-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+span.counter {
+  position: absolute;
+  color: #fff;
+  background: red;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 50px;
+  top: -5px;
+  right: 15px;
+}
+
+.top-navbar-height {
+  top: 48px !important;
+  height: auto !important;
+  border-radius: 10px;
+  overflow-y: visible !important;
+}
+
+.notif-width {
+  width: 215px !important;
+}
+
+.notif-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.notif-item {
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+
+  p {
+    color: black;
+    margin: 0;
+    line-height: 22px !important;
+  }
+}
+
+i.notification-bell {
+  margin-right: 20px;
+}
+
+i.notification-bell, i.tick {
+  font-size: 1.7rem;
+}
+
+a.notif-item:hover {
+  background-color: #ececec !important;
+}
+
+ul li.notif-list:hover {
+  border-radius: 10px;
+}
+
+ul li.notif-list:first-child:hover {
+  border-radius: 10px 10px 0 0 !important;
+}
+
+ul li.notif-list:last-child:hover {
+  border-radius: 0 0 10px 10px !important;
+}
+
+@media only screen and (max-width: 1290px) {
+  .top-navbar-height {
+    top: 50px !important;
+  }
+}
+
+
+.no-notif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.no-notif p {
+  font-size: 14px;
+}
