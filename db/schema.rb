@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_05_123908) do
+ActiveRecord::Schema.define(version: 2018_09_06_122549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(version: 2018_09_05_123908) do
     t.string "owner"
     t.string "address"
     t.integer "guests"
-    t.integer "price"
-    t.string "flight_number"
+    t.string "price"
     t.string "reservation_number"
     t.string "departure_place"
     t.string "arrival_place"
@@ -48,6 +47,17 @@ ActiveRecord::Schema.define(version: 2018_09_05_123908) do
     t.string "check_in"
     t.string "check_out"
     t.string "telephone"
+    t.string "go_departure_date"
+    t.string "go_arrival_date"
+    t.string "return_departure_date"
+    t.string "return_arrival_date"
+    t.string "go_departure_place"
+    t.string "go_arrival_place"
+    t.string "return_departure_place"
+    t.string "return_arrival_place"
+    t.string "go_flight_number"
+    t.string "return_flight_number"
+    t.text "flights"
     t.index ["journey_id"], name: "index_journey_items_on_journey_id"
   end
 
