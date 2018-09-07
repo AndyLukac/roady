@@ -32,8 +32,8 @@ merveilles.save
 puts "Je crée Vietnam"
 vietnam = Journey.create!(
   name: "Vietnam",
-  start_date: Date.parse("11/03/2019"),
-  end_date: Date.parse("24/03/2019"),
+  start_date: Date.parse("11/03/2018"),
+  end_date: Date.parse("24/03/2018"),
   photo: "http://sumabeachlifestyle.com/wp-content/uploads/2016/05/Rice-Fields-in-Sapa-Vietnam.jpg",
   user: nayeli,
 )
@@ -44,8 +44,8 @@ vietnam.save
 puts "Je crée New Zealand"
 newzealand = Journey.create!(
   name: "New Zealand",
-  start_date: Date.parse("29/06/2019"),
-  end_date: Date.parse("15/07/2019"),
+  start_date: Date.parse("29/01/2018"),
+  end_date: Date.parse("15/02/2018"),
   photo: "http://www.woolsnz.com/images/Lake%20Hawea.jpg",
   user: nayeli,
 )
