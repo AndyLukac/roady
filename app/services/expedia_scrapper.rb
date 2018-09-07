@@ -7,12 +7,12 @@ class ExpediaScrapper
   end
 
   def scrap
-    Flight.destroy_all
+
     html_doc = Nokogiri::HTML(@email.raw_html)
 
     id = html_doc.xpath('.//*[@alt="flight to"]').first.parent['class'].match(/m_(-?\d+)split/)[1]
 
-    reservation_number = #html_doc.search('//*[@id="m_' + id + 'email-module-container"]/tbody/tr[8]/td/table[1]/tbody/tr[5]/td/table/tbody/tr/td/div[2]').text.strip
+    reservation_number = html_doc.search('//*[@id="m_' + id + 'email-module-container"]/tbody/tr[8]/td/table[1]/tbody/tr[5]/td/table/tbody/tr/td/div[2]').text.strip
     go_flight_number = #html_doc.search('//*[@id="m_' + id + 'email-module-container"]/tbody/tr[8]/td/table[2]/tbody/tr[3]/td/span').text.strip
     go_departure_date = #html_doc.search('//*[@id="m_' + id + 'email-module-container"]/tbody/tr[8]/td/table[2]/tbody/tr[2]/td/span[3]').text.strip
     price = #html_doc.search('//*[@id="m_' + id + 'flight-total-amount"]/strong').text.gsub(/\P{ASCII}/,'').strip
