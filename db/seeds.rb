@@ -67,7 +67,6 @@ ireland.save
 
 Flight.create!(
   reservation_number: "G16THY",
-  flight_number: "H1 YT56",
   departure_place: "Lyon-Saint Exupéry Airport, France",
   arrival_place: "Dublin, Ireland",
   departure_date: DateTime.parse("11/10/2018 02:00pm"),
@@ -120,7 +119,6 @@ Accommodation.create!(
 
 Flight.create!(
   reservation_number: "HN568459",
-  flight_number: "AN 42",
   departure_place: "Killowen, Co. Waterford, X91 E2WP, Ireland",
   arrival_place: "Lyon-Saint Exupéry Airport, France",
   departure_date: DateTime.parse("22/11/2018 05:00pm"),
