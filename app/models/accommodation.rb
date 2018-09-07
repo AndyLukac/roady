@@ -11,6 +11,7 @@ class Accommodation < JourneyItem
   validates :arrival_date, presence: true
   validates :departure_date, presence: true
   validates :reservation_number, presence: true
+  validates :telephone, presence: true
 
   def geocode_place_adresses
   end

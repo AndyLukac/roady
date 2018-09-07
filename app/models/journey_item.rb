@@ -1,5 +1,6 @@
 class JourneyItem < ApplicationRecord
   belongs_to :journey
+  serialize :flights, Array
 
   after_validation :geocode_place_adresses, if: :any_address_changed?
 
@@ -17,4 +18,5 @@ class JourneyItem < ApplicationRecord
     self.departure_latitude = departure_coordinates.first.latitude
     self.arrival_latitude = arrival_coordinates.first.latitude
   end
+
 end
