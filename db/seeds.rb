@@ -56,8 +56,8 @@ newzealand.save
 puts "Je crée Ireland"
 ireland = Journey.create!(
   name: "Ireland",
-  start_date: Date.parse("12/10/2019"),
-  end_date: Date.parse("22/10/2019"),
+  start_date: Date.parse("12/06/2018"),
+  end_date: Date.parse("22/06/2018"),
   photo: "https://www.worldtravelguide.net/wp-content/uploads/2017/04/shu-Ireland-Clare-DoonagoreCastle-244049320-Patryk-Kosmider-copy.jpg",
   user: nayeli,
 )
@@ -69,16 +69,16 @@ Flight.create!(
   reservation_number: "G16THY",
   departure_place: "Lyon-Saint Exupéry Airport, France",
   arrival_place: "Dublin, Ireland",
-  departure_date: DateTime.parse("11/10/2018 02:00pm"),
-  arrival_date: DateTime.parse("11/11/2018 04:00pm"),
+  departure_date: DateTime.parse("12/06/2018 02:00pm"),
+  arrival_date: DateTime.parse("12/06/2018 04:00pm"),
   price: 225,
   journey: ireland
 )
 
 Accommodation.create!(
   reservation_number: "RESA1",
-  arrival_date: DateTime.parse("11/11/2018"),
-  departure_date: DateTime.parse("17/11/2018"),
+  arrival_date: DateTime.parse("12/06/2018"),
+  departure_date: DateTime.parse("17/06/2018"),
   check_in: "06:00pm",
   check_out: "10:00am",
   name: "Luxury and cosy room in city centre!",
@@ -95,16 +95,16 @@ Train.create!(
   reservation_number: "T16THY",
   departure_place: "Heuston Station, St. Johns Road West, Dublin 8, Ireland",
   arrival_place: "Terminus St, Co. Waterford, Ireland",
-  departure_date: DateTime.parse("17/11/2018 12:00pm"),
-  arrival_date: DateTime.parse("17/11/2018 02:00pm"),
+  departure_date: DateTime.parse("17/06/2018 12:00pm"),
+  arrival_date: DateTime.parse("17/06/2018 02:00pm"),
   price: 45,
   journey: ireland
 )
 
 Accommodation.create!(
   reservation_number: "HGTYF21",
-  arrival_date: DateTime.parse("17/11/2018"),
-  departure_date: DateTime.parse("22/11/2018"),
+  arrival_date: DateTime.parse("17/06/2018"),
+  departure_date: DateTime.parse("22/06/2018"),
   check_in: "04:00pm",
   check_out: "02:00pm",
   name: "Double Bed-Room with Private Bathroom",
@@ -121,8 +121,8 @@ Flight.create!(
   reservation_number: "HN568459",
   departure_place: "Killowen, Co. Waterford, X91 E2WP, Ireland",
   arrival_place: "Lyon-Saint Exupéry Airport, France",
-  departure_date: DateTime.parse("22/11/2018 05:00pm"),
-  arrival_date: DateTime.parse("22/11/2018 07:00pm"),
+  departure_date: DateTime.parse("22/06/2018 05:00pm"),
+  arrival_date: DateTime.parse("22/06/2018 07:00pm"),
   price: 712,
   journey: ireland
   )

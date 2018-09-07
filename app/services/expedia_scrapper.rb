@@ -7,7 +7,7 @@ class ExpediaScrapper
   end
 
   def scrap
-
+    Flight
     html_doc = Nokogiri::HTML(@email.raw_html)
 
     id = html_doc.xpath('.//*[@alt="flight to"]').first.parent['class'].match(/m_(-?\d+)split/)[1]
