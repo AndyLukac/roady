@@ -89,5 +89,7 @@ class ExpediaScrapper
         arrival_place: city_arrival,
         )
     end
+
+    Notification.create!(user: journey.user, journey: journey, message: "Your flight #{reservation_number} has been created for #{journey.name}")
   end
 end
